@@ -167,12 +167,7 @@ RIDES = [
         ("camera", "Kamerawechsel", "tab", False),
         ("chat", "Chat", "slash", False),
     ]),
-    ("settings", "Settings", (60, 60, 60), [
-        ("menu", "Menue", "escape", False),
-        ("speedup", "Speed Hoch", "rightArrow", False),
-        ("speeddown", "Speed Runter", "leftArrow", False),
-        ("repeatspeed", "Repeat Speed", None, "system"),
-    ]),
+   
     ("lighteffect", "LightEffect", (200, 150, 0), [
         ("preset1", "Preset 1", "numpad1", False),
         ("preset2", "Preset 2", "numpad2", False),
@@ -222,6 +217,14 @@ RIDES = [
         ("prev", "Vorheriger Track", "a", False),
         ("micro", "Mikro", "q", True),
         ("microecho", "Mikro Echo", "w", "holdtoggle"),
+    ]),
+    ("settings", "Settings", (60, 60, 60), [
+        ("menu", "Menue", "escape", False),
+        ("speedup", "Speed Hoch", "rightArrow", False),
+        ("speeddown", "Speed Runter", "leftArrow", False),
+        ("repeatspeed", "Repeat Speed", None, "system"),
+        ("showtitle", "Schrift AN/AUS", None, "system"),
+        ("credits", "Unofficial by BlackMautz", None, "system"),
     ]),
     ("jingles", "Jingles", (180, 150, 0), [
         ("jingle1", "Jingle 1", "f1", False),
@@ -294,6 +297,7 @@ PAGES = [
         "2,2": pbtn("Kreuz\nAN/AUS", "breakdance", "kreuz", 10, GREEN),
         "3,2": pbtn("Kreuz\nTippen", "breakdance", "kreuztippen", 10, BLUE),
         "0,3": pbtn("Gondel-\nbremse", "breakdance", "gondelbremse", 10, YELLOW),
+        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
         "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "StarLight", "buttons": {
@@ -313,6 +317,7 @@ PAGES = [
         "5,2": pbtn("Arm 0", "starlight", "arm0", 10, BLUE),
         "2,3": pbtn("Platform\nHoch", "starlight", "platformup", 10, GREEN),
         "3,3": pbtn("Platform\nRunter", "starlight", "platformdown", 10, RED),
+        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
         "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "XPlosion + FunHouse", "buttons": {
@@ -356,6 +361,7 @@ PAGES = [
         "2,3": pbtn("Hub\nHoch", "rotator", "hubup", 10, GREEN),
         "3,3": pbtn("Hub\nStop", "rotator", "hubstop", 10, YELLOW),
         "4,3": pbtn("Hub\nRunter", "rotator", "hubdown", 10, RED),
+        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
         "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "Turaka + Standard", "buttons": {
@@ -379,6 +385,7 @@ PAGES = [
         "0,3": pbtn("Menue", "settings", "menu", 10, WHITE),
         "1,3": pbtn("Speed\nHoch", "settings", "speedup", 10, GREEN),
         "2,3": pbtn("Speed\nRunter", "settings", "speeddown", 10, RED),
+        "2,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
         "3,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "LightEffect", "buttons": {
@@ -411,6 +418,7 @@ PAGES = [
         "2,3": pbtn("Flamme", "lighteffect", "flame", 10, RED),
         "3,3": pbtn("Seifenbl.", "lighteffect", "bubbles", 10, BLUE),
         "4,3": pbtn("Horn", "lighteffect", "horn", 11, YELLOW),
+        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
         "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "MovingHeads + Sound", "buttons": {
@@ -429,6 +437,8 @@ PAGES = [
         "2,2": pbtn("Vorher.\nTrack", "sound", "prev", 10, BLUE),
         "3,2": pbtn("Mikro", "sound", "micro", 10, YELLOW),
         "4,2": pbtn("Mikro\nEcho", "sound", "microecho", 10, PURPLE),
+        "5,3": pbtn("Unofficial\nby BlackMautz", "settings", "credits", 7, WHITE),
+        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
         "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "Jingles", "buttons": {
@@ -600,10 +610,11 @@ class P
     static HashSet<string> ht = new HashSet<string>();
     static Dictionary<string, bool> ts = new Dictionary<string, bool>();
     static Dictionary<string, string> tm = new Dictionary<string, string>();
+    static Dictionary<string, string> ca = new Dictionary<string, string>();
+    static Dictionary<string, string> imgOff = new Dictionary<string, string>();
+    static Dictionary<string, string> imgOn = new Dictionary<string, string>();
     static ClientWebSocket ws;
     static string logPath;
-    static string imgOff;
-    static string imgOn;
     static HashSet<string> rp = new HashSet<string>();
     static Dictionary<string, int> rg = new Dictionary<string, int>();
     static int repeatMs = 200;
@@ -611,6 +622,9 @@ class P
     static string[] repeatNm = {{"Langsam", "Mittel", "Schnell"}};
     static int[] repeatSp = {{400, 200, 80}};
     static string repeatCtx = null;
+    static bool showTitles = true;
+    static string titleCtx = null;
+    static Dictionary<string, string> ac = new Dictionary<string, string>();
 
     static void Log(string msg)
     {{
@@ -650,12 +664,32 @@ class P
         Log("Port=" + port + " UUID=" + uuid + " Reg=" + reg);
         Init();
         var dir = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-        var offPath = Path.Combine(dir, "imgs", "overlay.png");
-        var onPath = Path.Combine(dir, "imgs", "overlay_On.png");
-        if (File.Exists(offPath)) imgOff = "data:image/png;base64," + Convert.ToBase64String(File.ReadAllBytes(offPath));
-        if (File.Exists(onPath)) imgOn = "data:image/png;base64," + Convert.ToBase64String(File.ReadAllBytes(onPath));
-        Log("Init done, " + km.Count + " actions, " + tg.Count + " toggles, " + rp.Count + " repeats, " + tm.Count + " titles loaded");
-        Log("Images: off=" + (imgOff != null ? imgOff.Length + "ch" : "MISSING") + " on=" + (imgOn != null ? imgOn.Length + "ch" : "MISSING"));
+        var actDir = Path.Combine(dir, "imgs", "actions");
+        if (Directory.Exists(actDir))
+        {{
+            foreach (var rideDir in Directory.GetDirectories(actDir))
+            {{
+                string ride = Path.GetFileName(rideDir);
+                foreach (var f in Directory.GetFiles(rideDir, "*.png"))
+                {{
+                    string fn = Path.GetFileNameWithoutExtension(f);
+                    string b64 = "data:image/png;base64," + Convert.ToBase64String(File.ReadAllBytes(f));
+                    string prefix = ride + "_";
+                    if (!fn.StartsWith(prefix)) continue;
+                    string rest = fn.Substring(prefix.Length);
+                    int li = rest.LastIndexOf('_');
+                    if (li < 0) continue;
+                    string actId = rest.Substring(0, li);
+                    string state = rest.Substring(li + 1);
+                    string auid = "{PLUGIN_ID}." + ride + "." + actId;
+                    if (state == "idle" || state == "off")
+                        imgOff[auid] = b64;
+                    else
+                        imgOn[auid] = b64;
+                }}
+            }}
+        }}
+        Log("Init done, " + km.Count + " actions, " + tg.Count + " toggles, " + rp.Count + " repeats, " + tm.Count + " titles, " + imgOff.Count + "/" + imgOn.Count + " icons loaded");
 
         ws = new ClientWebSocket();
         Log("Connecting to ws://localhost:" + port);
@@ -700,8 +734,12 @@ class P
 
     static void SetImg(string context, bool isOn)
     {{
-        var img = isOn ? imgOn : imgOff;
-        if (img == null || context == null) return;
+        if (context == null) return;
+        string act;
+        if (!ca.TryGetValue(context, out act)) return;
+        var d = isOn ? imgOn : imgOff;
+        string img;
+        if (!d.TryGetValue(act, out img)) return;
         var si = "{{\\"event\\":\\"setImage\\",\\"context\\":\\"" + context +
             "\\",\\"payload\\":{{\\"image\\":\\"" + img + "\\",\\"target\\":0}}}}";
         Send(si);
@@ -745,6 +783,7 @@ class P
 
         if (ev == "willAppear" && action != null && context != null)
         {{
+            ca[context] = action;
             Log("willAppear: " + action + " hasTm=" + tm.ContainsKey(action) + " isTg=" + tg.ContainsKey(action));
             if (action == "{PLUGIN_ID}.settings.repeatspeed")
             {{
@@ -752,23 +791,43 @@ class P
                 SetImg(context, false);
                 SetTtl(context, "Repeat\\n" + repeatNm[repeatLv]);
             }}
+            else if (action == "{PLUGIN_ID}.settings.showtitle")
+            {{
+                titleCtx = context;
+                SetImg(context, false);
+                SetTtl(context, "Schrift\\n" + (showTitles ? "[ AN ]" : "[ AUS ]"));
+            }}
+            else if (action == "{PLUGIN_ID}.settings.credits")
+            {{
+                SetImg(context, false);
+                SetTtl(context, "Unofficial\\nby BlackMautz");
+            }}
             else if (tg.ContainsKey(action))
             {{
                 bool isOn = ts.ContainsKey(action) && ts[action];
                 SetImg(context, isOn);
-                var title = tm.ContainsKey(action) ? tm[action] : action;
-                var fullTitle = title + "\\n" + (isOn ? "[ AN ]" : "[ AUS ]");
-                SetTtl(context, fullTitle);
-                Log("Title(tg): " + fullTitle.Replace("\\n", "|"));
+                if (showTitles)
+                {{
+                    var title = tm.ContainsKey(action) ? tm[action] : action;
+                    var fullTitle = title + "\\n" + (isOn ? "[ AN ]" : "[ AUS ]");
+                    SetTtl(context, fullTitle);
+                    Log("Title(tg): " + fullTitle.Replace("\\n", "|"));
+                }}
+                else
+                    SetTtl(context, "");
+                ac[context] = action;
             }}
             else
             {{
                 SetImg(context, false);
-                if (tm.ContainsKey(action))
+                if (showTitles && tm.ContainsKey(action))
                 {{
                     SetTtl(context, tm[action]);
                     Log("Title(btn): " + tm[action].Replace("\\n", "|"));
                 }}
+                else
+                    SetTtl(context, "");
+                ac[context] = action;
             }}
         }}
         else if (ev == "keyDown" && action != null && tg.ContainsKey(action) && context != null)
@@ -805,8 +864,37 @@ class P
                 if (mod > 0) keybd_event(0, mod, 8u | 2u, UIntPtr.Zero);
             }}
             SetImg(context, newState);
-            var title = tm.ContainsKey(action) ? tm[action] : action;
-            SetTtl(context, title + "\\n" + (newState ? "[ AN ]" : "[ AUS ]"));
+            if (showTitles)
+            {{
+                var title = tm.ContainsKey(action) ? tm[action] : action;
+                SetTtl(context, title + "\\n" + (newState ? "[ AN ]" : "[ AUS ]"));
+            }}
+        }}
+        else if (ev == "keyDown" && action == "{PLUGIN_ID}.settings.showtitle" && context != null)
+        {{
+            showTitles = !showTitles;
+            SetTtl(context, "Schrift\\n" + (showTitles ? "[ AN ]" : "[ AUS ]"));
+            Log("ShowTitles: " + showTitles);
+            foreach (var kv in ac)
+            {{
+                var ctx = kv.Key;
+                var act = kv.Value;
+                if (tg.ContainsKey(act))
+                {{
+                    if (showTitles)
+                    {{
+                        bool on2 = ts.ContainsKey(act) && ts[act];
+                        var t2 = tm.ContainsKey(act) ? tm[act] : act;
+                        SetTtl(ctx, t2 + "\\n" + (on2 ? "[ AN ]" : "[ AUS ]"));
+                    }}
+                    else SetTtl(ctx, "");
+                }}
+                else
+                {{
+                    if (showTitles && tm.ContainsKey(act)) SetTtl(ctx, tm[act]);
+                    else SetTtl(ctx, "");
+                }}
+            }}
         }}
         else if (ev == "keyDown" && action == "{PLUGIN_ID}.settings.repeatspeed" && context != null)
         {{
@@ -908,7 +996,7 @@ def generate_manifest():
     # Reihenfolge: Fahrgeschaefte zuerst, Sound/Mic ganz unten
     MANIFEST_ORDER = [
         "breakdance", "starlight", "xplosion", "funhouse", "rotator", "turaka",
-        "standard", "settings", "lighteffect", "movingheads", "jingles", "sound",
+        "standard", "lighteffect", "movingheads", "sound","jingles", "settings",
     ]
     rides_by_id = {r[0]: r for r in RIDES}
     ordered_rides = [rides_by_id[rid] for rid in MANIFEST_ORDER if rid in rides_by_id]
@@ -920,19 +1008,26 @@ def generate_manifest():
     actions = []
     for ride_id, ride_name, _, action_list in ordered_rides:
         # Separator/Header fuer jede Kategorie
+        cat_icon = f"imgs/categories/{ride_id}"
         actions.append({
-            "Icon": "imgs/action",
+            "Icon": cat_icon,
             "Name": f"\u2501\u2501\u2501 {ride_name} \u2501\u2501\u2501",
-            "States": [{"Image": "imgs/key", "ShowTitle": True, "TitleAlignment": "bottom"}],
+            "States": [{"Image": cat_icon, "ShowTitle": True, "TitleAlignment": "bottom"}],
             "Tooltip": f"Kategorie: {ride_name}",
             "UUID": f"{PLUGIN_ID}.sep.{ride_id}",
         })
         for action in action_list:
-            action_id, label, _, _ = action
+            action_id, label, _, mode = action
+            # Bestimme idle-Bildname basierend auf Modus
+            if mode == "toggle":
+                idle_name = f"{ride_id}_{action_id}_off"
+            else:
+                idle_name = f"{ride_id}_{action_id}_idle"
+            icon_path = f"imgs/actions/{ride_id}/{idle_name}"
             actions.append({
-                "Icon": "imgs/action",
+                "Icon": icon_path,
                 "Name": f"    {label}",
-                "States": [{"Image": "imgs/key", "ShowTitle": True, "TitleAlignment": "bottom"}],
+                "States": [{"Image": icon_path, "ShowTitle": True, "TitleAlignment": "bottom"}],
                 "Tooltip": f"{ride_name} - {label}",
                 "UUID": f"{PLUGIN_ID}.{ride_id}.{action_id}",
             })
@@ -1061,15 +1156,25 @@ if __name__ == "__main__":
     imgs_dir = os.path.join(SDPLUGIN_DIR, "imgs")
     os.makedirs(imgs_dir, exist_ok=True)
 
-    # Plugin-Icon (dunkelgruenes Quadrat)
-    for name, size in [("plugin.png", 72), ("plugin@2x.png", 144)]:
-        with open(os.path.join(imgs_dir, name), "wb") as f:
-            f.write(create_png(size, size, 30, 80, 60))
-
-    # Kategorie-Icon
-    for name, size in [("category.png", 28), ("category@2x.png", 56)]:
-        with open(os.path.join(imgs_dir, name), "wb") as f:
-            f.write(create_png(size, size, 30, 80, 60))
+    # Plugin-Icon + Kategorie-Icon aus Githubreadmybild.png
+    from PIL import Image
+    main_img_path = r"C:\Users\mrbla\Desktop\streamdeck_kirmes_icons_v2\Neuer Ordner\Githubreadmybild.png"
+    if os.path.exists(main_img_path):
+        img = Image.open(main_img_path)
+        for name, size in [("plugin.png", 72), ("plugin@2x.png", 144)]:
+            resized = img.resize((size, size), Image.LANCZOS)
+            resized.save(os.path.join(imgs_dir, name))
+        for name, size in [("category.png", 28), ("category@2x.png", 56)]:
+            resized = img.resize((size, size), Image.LANCZOS)
+            resized.save(os.path.join(imgs_dir, name))
+    else:
+        # Fallback: dunkelgruenes Quadrat
+        for name, size in [("plugin.png", 72), ("plugin@2x.png", 144)]:
+            with open(os.path.join(imgs_dir, name), "wb") as f:
+                f.write(create_png(size, size, 30, 80, 60))
+        for name, size in [("category.png", 28), ("category@2x.png", 56)]:
+            with open(os.path.join(imgs_dir, name), "wb") as f:
+                f.write(create_png(size, size, 30, 80, 60))
 
     # Action-Icon (für die Aktionsliste)
     for name, size in [("action.png", 20), ("action@2x.png", 40)]:
@@ -1081,21 +1186,34 @@ if __name__ == "__main__":
         with open(os.path.join(imgs_dir, name), "wb") as f:
             f.write(create_png(size, size, 35, 35, 40))
 
-    # Overlay-Bilder fuer Toggle-Buttons kopieren
-    overlay_src = r"H:\dsdasdsad\de.blackmautz.telemetry.all.sdPlugin-main\de.blackmautz.telemetry.all.sdPlugin\actions\assets"
-    local_assets = os.path.join(BASE_DIR, "assets")
-    overlay_count = 0
-    for img_name in ["overlay.png", "overlay_On.png"]:
-        # Zuerst lokalen assets/ Ordner pruefen, dann H: Pfad
-        src = os.path.join(local_assets, img_name)
-        if not os.path.exists(src):
-            src = os.path.join(overlay_src, img_name)
-        if os.path.exists(src):
-            import shutil
-            shutil.copy2(src, os.path.join(imgs_dir, img_name))
-            overlay_count += 1
+    # Kategorie-Icons kopieren
+    import shutil
+    cat_icons_src = r"C:\Users\mrbla\Desktop\streamdeck_kirmes_icons_v2\Neuer Ordner"
+    cat_dir = os.path.join(imgs_dir, "categories")
+    os.makedirs(cat_dir, exist_ok=True)
+    if os.path.exists(cat_icons_src):
+        for png in os.listdir(cat_icons_src):
+            if png.endswith(".png") and png != "Githubreadmybild.png":
+                ride_id = png.replace(".png", "")
+                shutil.copy2(os.path.join(cat_icons_src, png), os.path.join(cat_dir, f"{ride_id}.png"))
 
-    print(f"      8 Icon-Dateien + {overlay_count} Overlay-Bilder erstellt")
+    # Per-Action Icons kopieren
+    icons_src = r"C:\Users\mrbla\Desktop\streamdeck_kirmes_icons_v2"
+    actions_dir = os.path.join(imgs_dir, "actions")
+    icon_count = 0
+    if os.path.exists(icons_src):
+        for ride_dir in os.listdir(icons_src):
+            ride_path = os.path.join(icons_src, ride_dir)
+            if not os.path.isdir(ride_path):
+                continue
+            dest_dir = os.path.join(actions_dir, ride_dir)
+            os.makedirs(dest_dir, exist_ok=True)
+            for png in os.listdir(ride_path):
+                if png.endswith(".png"):
+                    shutil.copy2(os.path.join(ride_path, png), os.path.join(dest_dir, png))
+                    icon_count += 1
+
+    print(f"      8 Icon-Dateien + {icon_count} Action-Icons kopiert")
 
     # 5) Eingebettetes Profil
     print("[5/6] Eingebettetes Profil erstellen...")
@@ -1132,11 +1250,11 @@ if __name__ == "__main__":
             os.path.join(SDPLUGIN_DIR, "manifest.json"),
             os.path.join(installed_dir, "manifest.json")
         )
-        # Overlay-Bilder kopieren
+        # Bilder kopieren (inkl. actions/ Unterordner)
         inst_imgs = os.path.join(installed_dir, "imgs")
-        os.makedirs(inst_imgs, exist_ok=True)
-        for img_name in os.listdir(imgs_dir):
-            shutil.copy2(os.path.join(imgs_dir, img_name), os.path.join(inst_imgs, img_name))
+        if os.path.exists(inst_imgs):
+            shutil.rmtree(inst_imgs)
+        shutil.copytree(imgs_dir, inst_imgs)
         # VERSION kopieren
         shutil.copy2(os.path.join(SDPLUGIN_DIR, "VERSION"), os.path.join(installed_dir, "VERSION"))
         print(f"      plugin.exe + manifest + imgs + VERSION kopiert nach {installed_dir}")
