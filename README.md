@@ -2,7 +2,7 @@
 
 ![Fairground Online Stream Deck Plugin](Githubreadmybild.png)
 
-Ein natives Stream Deck XL Plugin für [Fairground Online](https://store.steampowered.com/app/Fairground_Online), das alle Fahrgeschäfte, Licht, Sound und Effekte direkt über den Stream Deck steuert.
+Ein natives Stream Deck XL Plugin für [Fairground Online](https://store.steampowered.com/app/3310530/Fairground_Online/), das alle Fahrgeschäfte, Licht, Sound und Effekte direkt über den Stream Deck steuert.
 
 **Inoffiziell erstellt von BlackMautz** – dieses Plugin ist kein offizielles Produkt des Spielentwicklers.
 
