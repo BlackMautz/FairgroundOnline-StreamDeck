@@ -30,6 +30,8 @@ Ein natives Stream Deck XL Plugin für [Fairground Online](https://store.steampo
 - **Schrift AN/AUS**: Alle Button-Titel global ein-/ausblenden
 - **Auto-Updater**: Prüft beim Start auf neue Versionen auf GitHub
 
+![Plugin Übersicht](readme1.png)
+
 ## Funktionsweise
 
 Das Plugin wird komplett durch ein Python-Skript (`create_fairground_plugin.py`) generiert:
@@ -90,6 +92,8 @@ Das Skript erstellt `Fairground_Online.streamDeckPlugin`. Falls das Plugin berei
 | 6 | LightEffect |
 | 7 | MovingHeads + Sound |
 | 8 | Jingles (1-12) + Decks (1-12) |
+
+![Stream Deck Layout](readme2.png)
 
 ## Button-Modi
 
