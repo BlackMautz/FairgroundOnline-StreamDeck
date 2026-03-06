@@ -1048,9 +1048,13 @@ if __name__ == "__main__":
 
     # Overlay-Bilder fuer Toggle-Buttons kopieren
     overlay_src = r"H:\dsdasdsad\de.blackmautz.telemetry.all.sdPlugin-main\de.blackmautz.telemetry.all.sdPlugin\actions\assets"
+    local_assets = os.path.join(BASE_DIR, "assets")
     overlay_count = 0
     for img_name in ["overlay.png", "overlay_On.png"]:
-        src = os.path.join(overlay_src, img_name)
+        # Zuerst lokalen assets/ Ordner pruefen, dann H: Pfad
+        src = os.path.join(local_assets, img_name)
+        if not os.path.exists(src):
+            src = os.path.join(overlay_src, img_name)
         if os.path.exists(src):
             import shutil
             shutil.copy2(src, os.path.join(imgs_dir, img_name))
@@ -1093,7 +1097,12 @@ if __name__ == "__main__":
             os.path.join(SDPLUGIN_DIR, "manifest.json"),
             os.path.join(installed_dir, "manifest.json")
         )
-        print(f"      plugin.exe kopiert nach {installed_dir}")
+        # Overlay-Bilder kopieren
+        inst_imgs = os.path.join(installed_dir, "imgs")
+        os.makedirs(inst_imgs, exist_ok=True)
+        for img_name in os.listdir(imgs_dir):
+            shutil.copy2(os.path.join(imgs_dir, img_name), os.path.join(inst_imgs, img_name))
+        print(f"      plugin.exe + manifest + imgs kopiert nach {installed_dir}")
         # Stream Deck neustarten
         print("      Stream Deck wird neugestartet...")
         subprocess.run(["taskkill", "/f", "/im", "StreamDeck.exe"],
