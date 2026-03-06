@@ -869,8 +869,6 @@ class P
         }}
     }}
 
-    static string Q(string s) {{ return "\\"" + s + "\\""; }}
-
     static void CU(string dir)
     {{
         try
@@ -886,32 +884,11 @@ class P
                 Log("Version: lokal=" + lv + " remote=" + rv);
                 if (rv == lv) {{ Log("Plugin aktuell v" + lv); return; }}
                 Log("Update " + lv + " -> " + rv);
-                string te = Path.Combine(dir, "plugin_new.exe");
-                string tm2 = Path.Combine(dir, "manifest_new.json");
-                wc.DownloadFile("https://github.com/BlackMautz/FairgroundOnline-StreamDeck/releases/latest/download/plugin.exe", te);
-                wc.DownloadFile("https://github.com/BlackMautz/FairgroundOnline-StreamDeck/releases/latest/download/manifest.json", tm2);
-                if (new FileInfo(te).Length < 10000) {{ Log("Update: Download zu klein, abgebrochen"); File.Delete(te); File.Delete(tm2); return; }}
-                string bp = Path.Combine(dir, "do_update.bat");
-                string pe = Path.Combine(dir, "plugin.exe");
-                string pm = Path.Combine(dir, "manifest.json");
-                var sb2 = new StringBuilder();
-                sb2.AppendLine("@echo off");
-                sb2.AppendLine("timeout /t 3 /nobreak >nul");
-                sb2.AppendLine("taskkill /f /im StreamDeck.exe >nul 2>&1");
-                sb2.AppendLine("timeout /t 5 /nobreak >nul");
-                sb2.AppendLine("copy /y " + Q(te) + " " + Q(pe));
-                sb2.AppendLine("copy /y " + Q(tm2) + " " + Q(pm));
-                sb2.AppendLine("del " + Q(te));
-                sb2.AppendLine("del " + Q(tm2));
-                sb2.AppendLine("echo " + rv + ">" + Q(vf));
-                sb2.AppendLine("start " + Q("") + " " + Q("%PROGRAMFILES%\\\\Elgato\\\\StreamDeck\\\\StreamDeck.exe"));
-                File.WriteAllText(bp, sb2.ToString());
-                var psi = new ProcessStartInfo();
-                psi.FileName = bp;
-                psi.WindowStyle = ProcessWindowStyle.Hidden;
-                psi.CreateNoWindow = true;
-                Process.Start(psi);
-                Log("Update wird installiert...");
+                string tmp = Path.Combine(Path.GetTempPath(), "Fairground_Online.streamDeckPlugin");
+                wc.DownloadFile("https://github.com/BlackMautz/FairgroundOnline-StreamDeck/releases/latest/download/Fairground_Online.streamDeckPlugin", tmp);
+                if (new FileInfo(tmp).Length < 10000) {{ Log("Update: Download zu klein, abgebrochen"); File.Delete(tmp); return; }}
+                Log("Update heruntergeladen, starte Installation...");
+                Process.Start(tmp);
             }}
         }}
         catch (Exception ex) {{ Log("Update: " + ex.Message); }}
