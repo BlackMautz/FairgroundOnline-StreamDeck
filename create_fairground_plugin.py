@@ -21,7 +21,7 @@ PLUGIN_ID = "com.blackmautz.fairground"
 PLUGIN_NAME = "Fairground Online"
 PLUGIN_AUTHOR = "BlackMautz"
 PLUGIN_DESC = "Steuerung fuer Fairground Online Fahrgeschaefte"
-PLUGIN_VERSION = "1.0.0"
+PLUGIN_VERSION = "1.0.2"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SDPLUGIN_DIR = os.path.join(BASE_DIR, f"{PLUGIN_ID}.sdPlugin")
