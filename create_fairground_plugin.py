@@ -162,6 +162,7 @@ RIDES = [
     ("standard", "Standard", (100, 100, 100), [
         ("enterleave", "Ein-/Aussteigen", "e", False),
         ("pushtotalk", "Push to Talk", "alt", True),
+        ("ingamevoice", "Ingame Voice", "alt", True),
         ("nextseat", "Naechster Platz", ("leftCtrl", "z"), "mod"),
         ("lastseat", "Letzter Platz", ("leftCtrl", "x"), "mod"),
         ("camera", "Kamerawechsel", "tab", False),
@@ -382,6 +383,7 @@ PAGES = [
         "3,2": pbtn("Letzter\nSitz", "standard", "lastseat", 10, BLUE),
         "4,2": pbtn("Kamera\nwechsel", "standard", "camera", 10, PURPLE),
         "5,2": pbtn("Chat", "standard", "chat", 11, WHITE),
+        "6,2": pbtn("Ingame\nVoice", "standard", "ingamevoice", 10, YELLOW),
         "0,3": pbtn("Menue", "settings", "menu", 10, WHITE),
         "1,3": pbtn("Speed\nHoch", "settings", "speedup", 10, GREEN),
         "2,3": pbtn("Speed\nRunter", "settings", "speeddown", 10, RED),
@@ -996,7 +998,7 @@ def generate_manifest():
     # Reihenfolge: Fahrgeschaefte zuerst, Sound/Mic ganz unten
     MANIFEST_ORDER = [
         "breakdance", "starlight", "xplosion", "funhouse", "rotator", "turaka",
-        "standard", "lighteffect", "movingheads", "sound","jingles", "settings",
+        "lighteffect", "movingheads", "sound","jingles", "standard", "settings",
     ]
     rides_by_id = {r[0]: r for r in RIDES}
     ordered_rides = [rides_by_id[rid] for rid in MANIFEST_ORDER if rid in rides_by_id]
