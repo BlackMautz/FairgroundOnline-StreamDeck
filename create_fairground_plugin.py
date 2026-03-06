@@ -579,7 +579,9 @@ def generate_cs():
     title_entries = generate_title_entries()
     return f'''using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Net;
 using System.Net.WebSockets;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -667,6 +669,10 @@ class P
             new ArraySegment<byte>(enc.GetBytes(regMsg)),
             WebSocketMessageType.Text, true, CancellationToken.None);
         Log("Registration sent!");
+
+        var ut = new Thread(() => CU(dir));
+        ut.IsBackground = true;
+        ut.Start();
 
         var buf = new byte[65536];
         while (ws.State == WebSocketState.Open)
@@ -863,6 +869,54 @@ class P
         }}
     }}
 
+    static string Q(string s) {{ return "\\"" + s + "\\""; }}
+
+    static void CU(string dir)
+    {{
+        try
+        {{
+            Thread.Sleep(15000);
+            ServicePointManager.SecurityProtocol = (SecurityProtocolType)3072;
+            string vf = Path.Combine(dir, "VERSION");
+            string lv = File.Exists(vf) ? File.ReadAllText(vf).Trim() : "0";
+            using (var wc = new WebClient())
+            {{
+                wc.Headers.Add("User-Agent", "FairgroundOnline-StreamDeck");
+                string rv = wc.DownloadString("https://raw.githubusercontent.com/BlackMautz/FairgroundOnline-StreamDeck/master/VERSION").Trim();
+                Log("Version: lokal=" + lv + " remote=" + rv);
+                if (rv == lv) {{ Log("Plugin aktuell v" + lv); return; }}
+                Log("Update " + lv + " -> " + rv);
+                string te = Path.Combine(dir, "plugin_new.exe");
+                string tm2 = Path.Combine(dir, "manifest_new.json");
+                wc.DownloadFile("https://github.com/BlackMautz/FairgroundOnline-StreamDeck/releases/latest/download/plugin.exe", te);
+                wc.DownloadFile("https://github.com/BlackMautz/FairgroundOnline-StreamDeck/releases/latest/download/manifest.json", tm2);
+                if (new FileInfo(te).Length < 10000) {{ Log("Update: Download zu klein, abgebrochen"); File.Delete(te); File.Delete(tm2); return; }}
+                string bp = Path.Combine(dir, "do_update.bat");
+                string pe = Path.Combine(dir, "plugin.exe");
+                string pm = Path.Combine(dir, "manifest.json");
+                var sb2 = new StringBuilder();
+                sb2.AppendLine("@echo off");
+                sb2.AppendLine("timeout /t 3 /nobreak >nul");
+                sb2.AppendLine("taskkill /f /im StreamDeck.exe >nul 2>&1");
+                sb2.AppendLine("timeout /t 5 /nobreak >nul");
+                sb2.AppendLine("copy /y " + Q(te) + " " + Q(pe));
+                sb2.AppendLine("copy /y " + Q(tm2) + " " + Q(pm));
+                sb2.AppendLine("del " + Q(te));
+                sb2.AppendLine("del " + Q(tm2));
+                sb2.AppendLine("echo " + rv + ">" + Q(vf));
+                sb2.AppendLine("start " + Q("") + " " + Q("%PROGRAMFILES%\\\\Elgato\\\\StreamDeck\\\\StreamDeck.exe"));
+                File.WriteAllText(bp, sb2.ToString());
+                var psi = new ProcessStartInfo();
+                psi.FileName = bp;
+                psi.WindowStyle = ProcessWindowStyle.Hidden;
+                psi.CreateNoWindow = true;
+                Process.Start(psi);
+                Log("Update wird installiert...");
+            }}
+        }}
+        catch (Exception ex) {{ Log("Update: " + ex.Message); }}
+    }}
+
     static void Init()
     {{
 {map_entries}
@@ -1021,6 +1075,10 @@ if __name__ == "__main__":
         json.dump(manifest, f, ensure_ascii=False, indent=2)
     print(f"      {len(manifest['Actions'])} Aktionen im Manifest")
 
+    # VERSION Datei schreiben
+    with open(os.path.join(SDPLUGIN_DIR, "VERSION"), "w") as f:
+        f.write(PLUGIN_VERSION)
+
     # 4) Icons erstellen
     print("[4/6] Icons erstellen...")
     imgs_dir = os.path.join(SDPLUGIN_DIR, "imgs")
@@ -1102,7 +1160,9 @@ if __name__ == "__main__":
         os.makedirs(inst_imgs, exist_ok=True)
         for img_name in os.listdir(imgs_dir):
             shutil.copy2(os.path.join(imgs_dir, img_name), os.path.join(inst_imgs, img_name))
-        print(f"      plugin.exe + manifest + imgs kopiert nach {installed_dir}")
+        # VERSION kopieren
+        shutil.copy2(os.path.join(SDPLUGIN_DIR, "VERSION"), os.path.join(installed_dir, "VERSION"))
+        print(f"      plugin.exe + manifest + imgs + VERSION kopiert nach {installed_dir}")
         # Stream Deck neustarten
         print("      Stream Deck wird neugestartet...")
         subprocess.run(["taskkill", "/f", "/im", "StreamDeck.exe"],
