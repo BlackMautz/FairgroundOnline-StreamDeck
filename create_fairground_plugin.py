@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
 Erstellt ein Stream Deck Plugin (.streamDeckPlugin) fuer Fairground Online.
 Das Plugin sendet Tastenkuerzel (Scan-Codes) an das Spiel.
@@ -16,12 +16,12 @@ import uuid as uuid_mod
 import random
 import string
 
-# ─── Konfiguration ───────────────────────────────────────────
+# â”€â”€â”€ Konfiguration â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 PLUGIN_ID = "com.blackmautz.fairground"
 PLUGIN_NAME = "Fairground Online"
 PLUGIN_AUTHOR = "BlackMautz"
 PLUGIN_DESC = "Steuerung fuer Fairground Online Fahrgeschaefte"
-PLUGIN_VERSION = "1.0.3"
+PLUGIN_VERSION = "1.0.4"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SDPLUGIN_DIR = os.path.join(BASE_DIR, f"{PLUGIN_ID}.sdPlugin")
@@ -32,7 +32,7 @@ CSC_PATH = r"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
 DEVICE_MODEL = "20GAT9901"   # Stream Deck XL
 DEVICE_UUID = "@(1)[4057/108/CL33L2A04413]"
 
-# ─── Scan Codes (AT-Tastatur, positionsbasiert) ──────────────
+# â”€â”€â”€ Scan Codes (AT-Tastatur, positionsbasiert) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 # Diese Codes sind physisch, d.h. layout-unabhaengig.
 # Unity Input System: <Keyboard>/y = physische Y-Position (US-Layout)
 SCAN = {
@@ -64,7 +64,7 @@ SCAN = {
 # Extended Keys brauchen KEYEVENTF_EXTENDEDKEY Flag
 EXTENDED_KEYS = {"leftArrow", "rightArrow"}
 
-# ─── Fahrgeschaeft-Definitionen ──────────────────────────────
+# â”€â”€â”€ Fahrgeschaeft-Definitionen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 # Format: (ride_id, ride_name, (R,G,B), [
 #   (action_id, button_label, unity_key, is_hold), ...
 #   Toggle: (action_id, label, (key_on, key_off), "toggle")
@@ -255,7 +255,7 @@ RIDES = [
     ]),
 ]
 
-# ─── Button-Farben ────────────────────────────────────────────
+# â”€â”€â”€ Button-Farben â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 RED = "#ff4444"
 GREEN = "#44ff44"
 BLUE = "#44aaff"
@@ -266,7 +266,7 @@ CYAN = "#00cccc"
 WHITE = "#ffffff"
 PINK = "#ff66aa"
 
-# ─── Profil-Seiten (gleiche Anordnung wie vorheriges Profil) ─
+# â”€â”€â”€ Profil-Seiten (gleiche Anordnung wie vorheriges Profil) â”€
 def pbtn(title, ride_id, action_id, font_size=10, color="#ffffff"):
     """Erstellt einen Plugin-Button fuer das eingebettete Profil."""
     return {
@@ -299,7 +299,7 @@ PAGES = [
         "3,2": pbtn("Kreuz\nTippen", "breakdance", "kreuztippen", 10, BLUE),
         "0,3": pbtn("Gondel-\nbremse", "breakdance", "gondelbremse", 10, YELLOW),
         "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
+        "7,3": pbtn("Repeat\nSchnell", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "StarLight", "buttons": {
         "0,0": pbtn("NOT-\nAUS", "starlight", "emergencystop", 12, RED),
@@ -319,7 +319,7 @@ PAGES = [
         "2,3": pbtn("Platform\nHoch", "starlight", "platformup", 10, GREEN),
         "3,3": pbtn("Platform\nRunter", "starlight", "platformdown", 10, RED),
         "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
+        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "XPlosion + FunHouse", "buttons": {
         "0,0": pbtn("NOT-AUS\nXPlosion", "xplosion", "emergencystop", 9, RED),
@@ -363,7 +363,7 @@ PAGES = [
         "3,3": pbtn("Hub\nStop", "rotator", "hubstop", 10, YELLOW),
         "4,3": pbtn("Hub\nRunter", "rotator", "hubdown", 10, RED),
         "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
+        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "Turaka + Standard", "buttons": {
         "0,0": pbtn("NOT-AUS\nTuraka", "turaka", "emergencystop", 9, RED),
@@ -388,7 +388,7 @@ PAGES = [
         "1,3": pbtn("Speed\nHoch", "settings", "speedup", 10, GREEN),
         "2,3": pbtn("Speed\nRunter", "settings", "speeddown", 10, RED),
         "2,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "3,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
+        "3,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "LightEffect", "buttons": {
         "0,0": pbtn("Preset 1", "lighteffect", "preset1", 10, PURPLE),
@@ -421,7 +421,7 @@ PAGES = [
         "3,3": pbtn("Seifenbl.", "lighteffect", "bubbles", 10, BLUE),
         "4,3": pbtn("Horn", "lighteffect", "horn", 11, YELLOW),
         "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
+        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "MovingHeads + Sound", "buttons": {
         "0,0": pbtn("Moving\nHead AN", "movingheads", "onoff", 10, GREEN),
@@ -441,7 +441,7 @@ PAGES = [
         "4,2": pbtn("Mikro\nEcho", "sound", "microecho", 10, PURPLE),
         "5,3": pbtn("Unofficial\nby BlackMautz", "settings", "credits", 7, WHITE),
         "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\nMittel", "settings", "repeatspeed", 10, CYAN),
+        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
     }},
     {"name": "Jingles", "buttons": {
         "0,0": pbtn("Jingle 1", "jingles", "jingle1", 10, YELLOW),
@@ -472,9 +472,9 @@ PAGES = [
 ]
 
 
-# ═════════════════════════════════════════════════════════════
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 # Hilfsfunktionen
-# ═════════════════════════════════════════════════════════════
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
 def create_png(width, height, r, g, b):
     """Erstellt ein einfarbiges PNG-Bild."""
@@ -619,10 +619,10 @@ class P
     static string logPath;
     static HashSet<string> rp = new HashSet<string>();
     static Dictionary<string, int> rg = new Dictionary<string, int>();
-    static int repeatMs = 200;
+    static int repeatMs = 120;
     static int repeatLv = 1;
     static string[] repeatNm = {{"Langsam", "Mittel", "Schnell"}};
-    static int[] repeatSp = {{400, 200, 80}};
+    static int[] repeatSp = {{250, 120, 50}};
     static string repeatCtx = null;
     static bool showTitles = true;
     static string titleCtx = null;
@@ -916,18 +916,22 @@ class P
                 var ki2 = ki;
                 var t = new Thread(() => {{
                     if (ki2.m > 0) keybd_event(0, ki2.m, 8u, UIntPtr.Zero);
+                    keybd_event(0, ki2.s, ki2.f, UIntPtr.Zero);
+                    keybd_event(0, ki2.s, ki2.f | 2u, UIntPtr.Zero);
+                    for (int d = 0; d < 500 && rg[a] == gen; d += 10) Thread.Sleep(10);
+                    int delay = 500;
                     while (rg[a] == gen)
                     {{
                         keybd_event(0, ki2.s, ki2.f, UIntPtr.Zero);
-                        Thread.Sleep(30);
                         keybd_event(0, ki2.s, ki2.f | 2u, UIntPtr.Zero);
-                        for (int w = 0; w < repeatMs && rg[a] == gen; w += 10) Thread.Sleep(10);
+                        for (int w = 0; w < delay && rg[a] == gen; w += 10) Thread.Sleep(10);
+                        if (delay > 100) delay -= 50;
                     }}
                     if (ki2.m > 0) keybd_event(0, ki2.m, 8u | 2u, UIntPtr.Zero);
                 }});
                 t.IsBackground = true;
                 t.Start();
-                Log("Repeat start: " + action + " " + repeatMs + "ms");
+                Log("Repeat accel start: " + action);
             }}
             else
             {{
@@ -1102,13 +1106,33 @@ def generate_profile():
         json.dump(profile_manifest, f, ensure_ascii=False)
 
 
-# ═════════════════════════════════════════════════════════════
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 # HAUPTPROGRAMM
-# ═════════════════════════════════════════════════════════════
+# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 if __name__ == "__main__":
     print("=== Fairground Online Stream Deck Plugin Builder ===\n")
 
-    # Aufräumen
+    # ZUERST: Alle Tasten loslassen und Plugin-Prozess beenden
+    # (verhindert Game-Crashes durch haengende Tasten beim Rebuild)
+    import ctypes
+    print("[0] Alle Tasten loslassen...")
+    for sc in [0x2A, 0x36, 0x1D, 0x38, 0xE038, 0xE01D]:
+        ext = 1 if sc > 0xFF else 0
+        scan = sc & 0xFF
+        ctypes.windll.user32.keybd_event(0, scan, 0x0008 | 0x0002 | ext, 0)
+    # Alle Scan-Codes aus SCAN-Tabelle releasen
+    for key_name, sc_val in SCAN.items():
+        ext = 1 if key_name in EXTENDED_KEYS else 0
+        ctypes.windll.user32.keybd_event(0, sc_val, 0x0008 | 0x0002 | ext, 0)
+    import time
+    time.sleep(0.2)
+    # StreamDeck und Plugin beenden (Tasten sind bereits losgelassen)
+    print("[0] StreamDeck und Plugin beenden...")
+    subprocess.run(["taskkill", "/f", "/im", "StreamDeck.exe"], capture_output=True)
+    subprocess.run(["taskkill", "/f", "/im", "plugin.exe"], capture_output=True)
+    time.sleep(3)
+
+    # AufrÃ¤umen
     if os.path.exists(SDPLUGIN_DIR):
         shutil.rmtree(SDPLUGIN_DIR)
     os.makedirs(SDPLUGIN_DIR, exist_ok=True)
@@ -1178,7 +1202,7 @@ if __name__ == "__main__":
             with open(os.path.join(imgs_dir, name), "wb") as f:
                 f.write(create_png(size, size, 30, 80, 60))
 
-    # Action-Icon (für die Aktionsliste)
+    # Action-Icon (fÃ¼r die Aktionsliste)
     for name, size in [("action.png", 20), ("action@2x.png", 40)]:
         with open(os.path.join(imgs_dir, name), "wb") as f:
             f.write(create_png(size, size, 50, 50, 50))
@@ -1260,11 +1284,10 @@ if __name__ == "__main__":
         # VERSION kopieren
         shutil.copy2(os.path.join(SDPLUGIN_DIR, "VERSION"), os.path.join(installed_dir, "VERSION"))
         print(f"      plugin.exe + manifest + imgs + VERSION kopiert nach {installed_dir}")
-        # Stream Deck neustarten
+        # Stream Deck neustarten (Tasten wurden bereits am Anfang losgelassen)
         print("      Stream Deck wird neugestartet...")
         subprocess.run(["taskkill", "/f", "/im", "StreamDeck.exe"],
                        capture_output=True)
-        import time
         time.sleep(2)
         sd_exe = os.path.join(
             os.environ["PROGRAMFILES"], "Elgato", "StreamDeck",
