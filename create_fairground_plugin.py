@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python3
 """
-Erstellt ein Stream Deck Plugin (.streamDeckPlugin) fuer Fairground Online.
-Das Plugin sendet Tastenkuerzel (Scan-Codes) an das Spiel.
+Erstellt ein Stream Deck Plugin (.streamDeckPlugin) für Fairground Online.
+Das Plugin sendet Tastenkürzel (Scan-Codes) an das Spiel.
 
 Ausgabe: Fairground_Online.streamDeckPlugin (Doppelklick zum Installieren)
 """
@@ -16,12 +16,12 @@ import uuid as uuid_mod
 import random
 import string
 
-# â”€â”€â”€ Konfiguration â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# === Konfiguration ===================================================
 PLUGIN_ID = "com.blackmautz.fairground"
 PLUGIN_NAME = "Fairground Online"
 PLUGIN_AUTHOR = "BlackMautz"
-PLUGIN_DESC = "Steuerung fuer Fairground Online Fahrgeschaefte"
-PLUGIN_VERSION = "1.0.4"
+PLUGIN_DESC = "Steuerung für Fairground Online Fahrgeschäfte"
+PLUGIN_VERSION = "1.1.0"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SDPLUGIN_DIR = os.path.join(BASE_DIR, f"{PLUGIN_ID}.sdPlugin")
@@ -31,7 +31,7 @@ CSC_PATH = r"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
 
 
 
-# â”€â”€â”€ Scan Codes (AT-Tastatur, positionsbasiert) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# === Scan Codes (AT-Tastatur, positionsbasiert) =======================
 # Diese Codes sind physisch, d.h. layout-unabhaengig.
 # Unity Input System: <Keyboard>/y = physische Y-Position (US-Layout)
 SCAN = {
@@ -63,7 +63,7 @@ SCAN = {
 # Extended Keys brauchen KEYEVENTF_EXTENDEDKEY Flag
 EXTENDED_KEYS = {"leftArrow", "rightArrow"}
 
-# â”€â”€â”€ Fahrgeschaeft-Definitionen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# === Fahrgeschaeft-Definitionen ======================================
 # Format: (ride_id, ride_name, (R,G,B), [
 #   (action_id, button_label, unity_key, is_hold), ...
 #   Toggle: (action_id, label, (key_on, key_off), "toggle")
@@ -76,11 +76,11 @@ RIDES = [
         ("plattespeeddown", "Platte -", "f", "repeat"),
         ("plattespeedup", "Platte +", "r", "repeat"),
         ("platte", "Platte", ("y", "u"), "toggle"),
-        ("plattetippen", "Platte Tip", "v", False),
+        ("plattetippen", "Platte Tip", "v", True),
         ("kreuzspeeddown", "Kreuz -", "g", "repeat"),
         ("kreuzspeedup", "Kreuz +", "t", "repeat"),
         ("kreuz", "Kreuz", ("h", "j"), "toggle"),
-        ("kreuztippen", "Kreuz Tip", "b", False),
+        ("kreuztippen", "Kreuz Tip", "b", True),
         ("gondelbremse", "Gondelbremse", "n", True),
     ]),
     ("starlight", "StarLight", (50, 100, 200), [
@@ -218,6 +218,9 @@ RIDES = [
         ("micro", "Mikro", "q", True),
         ("microecho", "Mikro Echo", "w", "holdtoggle"),
     ]),
+    ("timer", "Timer", (180, 80, 80), [
+        ("startstop", "Timer", None, "system"),
+    ]),
     ("settings", "Settings", (60, 60, 60), [
         ("menu", "Menue", "escape", False),
         ("speedup", "Speed Hoch", "rightArrow", False),
@@ -255,7 +258,7 @@ RIDES = [
 ]
 
 # Hilfsfunktionen
-# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+# =====================================================================
 
 def create_png(width, height, r, g, b):
     """Erstellt ein einfarbiges PNG-Bild."""
@@ -275,7 +278,7 @@ def create_png(width, height, r, g, b):
 
 
 def generate_map_entries():
-    """Generiert C# Dictionary-Eintraege fuer alle Aktionen."""
+    """Generiert C# Dictionary-Einträge für alle Aktionen."""
     lines = []
     for ride_id, _, _, actions in RIDES:
         for action in actions:
@@ -344,7 +347,7 @@ def generate_map_entries():
 
 
 def generate_title_entries():
-    """Generiert C# Dictionary-Eintraege fuer Button-Titel aus RIDES."""
+    """Generiert C# Dictionary-Einträge für Button-Titel aus RIDES."""
     lines = []
     for ride_id, ride_name, _, actions in RIDES:
         for action in actions:
@@ -356,7 +359,7 @@ def generate_title_entries():
 
 
 def generate_cs():
-    """Generiert den C# Quellcode fuer das Plugin."""
+    """Generiert den C# Quellcode für das Plugin."""
     map_entries = generate_map_entries()
     title_entries = generate_title_entries()
     return f'''using System;
@@ -397,6 +400,16 @@ class P
     static bool showTitles = true;
     static string titleCtx = null;
     static Dictionary<string, string> ac = new Dictionary<string, string>();
+
+    // Timer
+    static int timerDuration = 180; // Startdauer in Sekunden (3 Min)
+    static int timerRemaining = 180;
+    static bool timerRunning = false;
+    static bool timerPaused = false;
+    static string timerCtx = null;
+    static Thread timerThread = null;
+    static int timerGen = 0;
+    static DateTime timerKeyDown = DateTime.MinValue;
 
     static void Log(string msg)
     {{
@@ -563,6 +576,14 @@ class P
                 SetImg(context, false);
                 SetTtl(context, "Repeat\\n" + repeatNm[repeatLv]);
             }}
+            else if (action == "{PLUGIN_ID}.timer.startstop")
+            {{
+                timerCtx = context;
+                SetImg(context, false);
+                string dv = V(j, "duration");
+                if (dv != null) {{ int pd; if (int.TryParse(dv, out pd) && pd >= 10) {{ timerDuration = pd; if (!timerRunning) timerRemaining = pd; }} }}
+                SetTtl(context, TFmt());
+            }}
             else if (action == "{PLUGIN_ID}.settings.showtitle")
             {{
                 titleCtx = context;
@@ -675,6 +696,45 @@ class P
             SetTtl(context, "Repeat\\n" + repeatNm[repeatLv]);
             Log("RepeatSpeed: " + repeatNm[repeatLv] + " " + repeatMs + "ms");
         }}
+        else if (ev == "didReceiveSettings" && action == "{PLUGIN_ID}.timer.startstop")
+        {{
+            string dv = V(j, "duration");
+            if (dv != null) {{ int pd; if (int.TryParse(dv, out pd) && pd >= 10) {{ timerDuration = pd; if (!timerRunning) timerRemaining = pd; Log("Timer Dauer gesetzt: " + pd + "s"); if (timerCtx != null) SetTtl(timerCtx, TFmt()); }} }}
+        }}
+        else if (ev == "keyDown" && action == "{PLUGIN_ID}.timer.startstop" && context != null)
+        {{
+            timerKeyDown = DateTime.Now;
+        }}
+        else if (ev == "keyUp" && action == "{PLUGIN_ID}.timer.startstop" && context != null)
+        {{
+            double held = (DateTime.Now - timerKeyDown).TotalMilliseconds;
+            if (held > 800)
+            {{
+                timerGen++;
+                timerRunning = false;
+                timerPaused = false;
+                timerRemaining = timerDuration;
+                if (timerCtx != null) SetTtl(timerCtx, TFmt());
+                Log("Timer Reset (hold): " + timerDuration + "s");
+            }}
+            else if (!timerRunning)
+            {{
+                timerRunning = true;
+                timerPaused = false;
+                int gen = ++timerGen;
+                timerThread = new Thread(() => TRun(gen));
+                timerThread.IsBackground = true;
+                timerThread.Start();
+                Log("Timer gestartet: " + timerRemaining + "s");
+                if (timerCtx != null) SetTtl(timerCtx, TFmt());
+            }}
+            else
+            {{
+                timerPaused = !timerPaused;
+                Log("Timer " + (timerPaused ? "pausiert" : "fortgesetzt") + ": " + timerRemaining + "s");
+                if (timerCtx != null) SetTtl(timerCtx, TFmt());
+            }}
+        }}
         else if (ev == "keyDown" && action != null && km.ContainsKey(action))
         {{
             var ki = km[action];
@@ -733,6 +793,45 @@ class P
         }}
     }}
 
+    static string TFmt()
+    {{
+        int m = timerRemaining / 60;
+        int s = timerRemaining % 60;
+        string status = timerRunning ? (timerPaused ? "PAUSE" : ">>>") : "STOP";
+        return m.ToString() + ":" + s.ToString("D2") + "\\n" + status;
+    }}
+
+    static void TRun(int gen)
+    {{
+        while (timerRemaining > 0 && timerGen == gen)
+        {{
+            if (!timerPaused)
+            {{
+                Thread.Sleep(1000);
+                if (timerGen != gen) break;
+                if (!timerPaused) timerRemaining--;
+                if (timerCtx != null) SetTtl(timerCtx, TFmt());
+            }}
+            else
+                Thread.Sleep(100);
+        }}
+        if (timerGen == gen && timerRemaining <= 0)
+        {{
+            Log("Timer ABGELAUFEN!");
+            timerRunning = false;
+            // 5x blinken
+            for (int i = 0; i < 5 && timerGen == gen; i++)
+            {{
+                if (timerCtx != null) SetTtl(timerCtx, "0:00\\nFERTIG!");
+                Thread.Sleep(500);
+                if (timerCtx != null) SetTtl(timerCtx, "");
+                Thread.Sleep(500);
+            }}
+            timerRemaining = timerDuration;
+            if (timerCtx != null) SetTtl(timerCtx, TFmt());
+        }}
+    }}
+
     static void CU(string dir)
     {{
         try
@@ -768,22 +867,22 @@ class P
 
 
 def generate_manifest():
-    """Generiert die manifest.json fuer das Plugin."""
-    # Reihenfolge: Fahrgeschaefte zuerst, Sound/Mic ganz unten
+    """Generiert die manifest.json für das Plugin."""
+    # Reihenfolge: Fahrgeschäfte zuerst, Sound/Mic ganz unten
     MANIFEST_ORDER = [
         "breakdance", "starlight", "xplosion", "funhouse", "rotator", "turaka",
-        "lighteffect", "movingheads", "sound","jingles", "standard", "settings",
+        "lighteffect", "movingheads", "sound","jingles", "standard", "timer", "settings",
     ]
     rides_by_id = {r[0]: r for r in RIDES}
     ordered_rides = [rides_by_id[rid] for rid in MANIFEST_ORDER if rid in rides_by_id]
-    # Fuer Rides die nicht in MANIFEST_ORDER sind, am Ende anfuegen
+    # Für Rides die nicht in MANIFEST_ORDER sind, am Ende anfügen
     for r in RIDES:
         if r[0] not in MANIFEST_ORDER:
             ordered_rides.append(r)
 
     actions = []
     for ride_id, ride_name, _, action_list in ordered_rides:
-        # Separator/Header fuer jede Kategorie
+        # Separator/Header für jede Kategorie
         cat_icon = f"imgs/categories/{ride_id}"
         actions.append({
             "Icon": cat_icon,
@@ -800,13 +899,17 @@ def generate_manifest():
             else:
                 idle_name = f"{ride_id}_{action_id}_idle"
             icon_path = f"imgs/actions/{ride_id}/{idle_name}"
-            actions.append({
+            uuid = f"{PLUGIN_ID}.{ride_id}.{action_id}"
+            entry = {
                 "Icon": icon_path,
                 "Name": f"    {label}",
                 "States": [{"Image": icon_path, "ShowTitle": True, "TitleAlignment": "bottom"}],
                 "Tooltip": f"{ride_name} - {label}",
-                "UUID": f"{PLUGIN_ID}.{ride_id}.{action_id}",
-            })
+                "UUID": uuid,
+            }
+            if uuid == f"{PLUGIN_ID}.timer.startstop":
+                entry["PropertyInspectorPath"] = "timer_pi.html"
+            actions.append(entry)
 
     manifest = {
         "Actions": actions,
@@ -826,7 +929,7 @@ def generate_manifest():
 
 
 # HAUPTPROGRAMM
-# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+# =====================================================================
 if __name__ == "__main__":
     print("=== Fairground Online Stream Deck Plugin Builder ===\n")
 
@@ -850,7 +953,7 @@ if __name__ == "__main__":
     subprocess.run(["taskkill", "/f", "/im", "plugin.exe"], capture_output=True)
     time.sleep(3)
 
-    # AufrÃ¤umen
+    # Aufräumen
     if os.path.exists(SDPLUGIN_DIR):
         shutil.rmtree(SDPLUGIN_DIR)
     os.makedirs(SDPLUGIN_DIR, exist_ok=True)
@@ -881,7 +984,7 @@ if __name__ == "__main__":
         exit(1)
     print(f"      plugin.exe erstellt ({os.path.getsize(exe_path)} Bytes)")
 
-    # C# Source behalten (fuer Debugging)
+    # C# Source behalten (für Debugging)
     # os.remove(cs_path)
 
     # 3) manifest.json
@@ -894,6 +997,37 @@ if __name__ == "__main__":
     # VERSION Datei schreiben
     with open(os.path.join(SDPLUGIN_DIR, "VERSION"), "w") as f:
         f.write(PLUGIN_VERSION)
+
+    # Timer Property Inspector HTML
+    timer_pi = '''<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+body{font-family:Arial,sans-serif;background:#2D2D2D;color:#969696;margin:0;padding:12px;font-size:13px}
+.row{display:flex;align-items:center;padding:8px 0}
+.lbl{flex:0 0 80px;text-align:right;padding-right:12px}
+input[type=number]{width:60px;padding:4px 6px;background:#0D0D0D;border:1px solid #3a3a3a;border-radius:3px;color:#d8d8d8;font-size:13px;text-align:center}
+.info{color:#666;font-size:11px;margin-top:8px;padding:0 12px}
+</style></head><body>
+<div class="row"><span class="lbl">Minuten:</span><input type="number" id="m" min="0" max="99" value="3"></div>
+<div class="row"><span class="lbl">Sekunden:</span><input type="number" id="s" min="0" max="59" step="10" value="0"></div>
+<div class="info">Kurz druecken = Start/Pause<br>Gehalten = Reset</div>
+<script>
+var ws,uid;
+function connectElgatoStreamDeckSocket(p,u,r,i,a){
+uid=u;var ai=JSON.parse(a);
+ws=new WebSocket("ws://localhost:"+p);
+ws.onopen=function(){ws.send(JSON.stringify({event:r,uuid:u}));
+var st=ai.payload&&ai.payload.settings;
+if(st&&st.duration){var d=parseInt(st.duration);if(d>0){document.getElementById("m").value=Math.floor(d/60);document.getElementById("s").value=d%60}}};
+ws.onmessage=function(e){var msg=JSON.parse(e.data);
+if(msg.event==="didReceiveSettings"&&msg.payload&&msg.payload.settings&&msg.payload.settings.duration){
+var d=parseInt(msg.payload.settings.duration);if(d>0){document.getElementById("m").value=Math.floor(d/60);document.getElementById("s").value=d%60}}}}
+function sv(){var m=parseInt(document.getElementById("m").value)||0,s=parseInt(document.getElementById("s").value)||0,d=m*60+s;
+if(d<10)d=10;ws.send(JSON.stringify({event:"setSettings",context:uid,payload:{duration:d.toString()}}))}
+document.getElementById("m").onchange=sv;document.getElementById("s").onchange=sv;
+</script></body></html>'''
+    with open(os.path.join(SDPLUGIN_DIR, "timer_pi.html"), "w", encoding="utf-8") as f:
+        f.write(timer_pi)
 
     # 4) Icons erstellen
     print("[4/5] Icons erstellen...")
@@ -920,7 +1054,7 @@ if __name__ == "__main__":
             with open(os.path.join(imgs_dir, name), "wb") as f:
                 f.write(create_png(size, size, 30, 80, 60))
 
-    # Action-Icon (fÃ¼r die Aktionsliste)
+    # Action-Icon (für die Aktionsliste)
     for name, size in [("action.png", 20), ("action@2x.png", 40)]:
         with open(os.path.join(imgs_dir, name), "wb") as f:
             f.write(create_png(size, size, 50, 50, 50))
@@ -995,7 +1129,9 @@ if __name__ == "__main__":
         shutil.copytree(imgs_dir, inst_imgs)
         # VERSION kopieren
         shutil.copy2(os.path.join(SDPLUGIN_DIR, "VERSION"), os.path.join(installed_dir, "VERSION"))
-        print(f"      plugin.exe + manifest + imgs + VERSION kopiert nach {installed_dir}")
+        # Timer Property Inspector kopieren
+        shutil.copy2(os.path.join(SDPLUGIN_DIR, "timer_pi.html"), os.path.join(installed_dir, "timer_pi.html"))
+        print(f"      plugin.exe + manifest + imgs + VERSION + PI kopiert nach {installed_dir}")
         # Stream Deck neustarten (Tasten wurden bereits am Anfang losgelassen)
         print("      Stream Deck wird neugestartet...")
         subprocess.run(["taskkill", "/f", "/im", "StreamDeck.exe"],
