@@ -29,8 +29,7 @@ OUTPUT_FILE = os.path.join(BASE_DIR, "Fairground_Online.streamDeckPlugin")
 
 CSC_PATH = r"C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe"
 
-DEVICE_MODEL = "20GAT9901"   # Stream Deck XL
-DEVICE_UUID = "@(1)[4057/108/CL33L2A04413]"
+
 
 # â”€â”€â”€ Scan Codes (AT-Tastatur, positionsbasiert) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
 # Diese Codes sind physisch, d.h. layout-unabhaengig.
@@ -255,224 +254,6 @@ RIDES = [
     ]),
 ]
 
-# â”€â”€â”€ Button-Farben â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-RED = "#ff4444"
-GREEN = "#44ff44"
-BLUE = "#44aaff"
-YELLOW = "#ffcc00"
-ORANGE = "#ffaa00"
-PURPLE = "#cc66ff"
-CYAN = "#00cccc"
-WHITE = "#ffffff"
-PINK = "#ff66aa"
-
-# â”€â”€â”€ Profil-Seiten (gleiche Anordnung wie vorheriges Profil) â”€
-def pbtn(title, ride_id, action_id, font_size=10, color="#ffffff"):
-    """Erstellt einen Plugin-Button fuer das eingebettete Profil."""
-    return {
-        "Controllers": ["Keypad"],
-        "Name": PLUGIN_NAME,
-        "State": 0,
-        "States": [{
-            "FontSize": font_size,
-            "FontStyle": "Bold",
-            "ShowTitle": True,
-            "Title": title,
-            "TitleAlignment": "middle",
-            "TitleColor": color,
-        }],
-        "UUID": f"{PLUGIN_ID}.{ride_id}.{action_id}",
-    }
-
-PAGES = [
-    {"name": "BreakDance", "buttons": {
-        "0,0": pbtn("NOT-\nAUS", "breakdance", "emergencystop", 12, RED),
-        "1,0": pbtn("Anlage\nEIN/AUS", "breakdance", "onoff", 10, GREEN),
-        "3,0": pbtn("Kompr.\nAN/AUS", "breakdance", "kompressor", 10, GREEN),
-        "0,1": pbtn("Platte\nSpeed -", "breakdance", "plattespeeddown", 10, ORANGE),
-        "1,1": pbtn("Platte\nSpeed +", "breakdance", "plattespeedup", 10, ORANGE),
-        "2,1": pbtn("Platte\nAN/AUS", "breakdance", "platte", 10, GREEN),
-        "3,1": pbtn("Platte\nTippen", "breakdance", "plattetippen", 10, BLUE),
-        "0,2": pbtn("Kreuz\nSpeed -", "breakdance", "kreuzspeeddown", 10, ORANGE),
-        "1,2": pbtn("Kreuz\nSpeed +", "breakdance", "kreuzspeedup", 10, ORANGE),
-        "2,2": pbtn("Kreuz\nAN/AUS", "breakdance", "kreuz", 10, GREEN),
-        "3,2": pbtn("Kreuz\nTippen", "breakdance", "kreuztippen", 10, BLUE),
-        "0,3": pbtn("Gondel-\nbremse", "breakdance", "gondelbremse", 10, YELLOW),
-        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\nSchnell", "settings", "repeatspeed", 10, CYAN),
-    }},
-    {"name": "StarLight", "buttons": {
-        "0,0": pbtn("NOT-\nAUS", "starlight", "emergencystop", 12, RED),
-        "1,0": pbtn("Anlage\nEIN/AUS", "starlight", "onoff", 10, GREEN),
-        "2,0": pbtn("Reset", "starlight", "reset", 10, YELLOW),
-        "3,0": pbtn("Parking", "starlight", "parking", 10, BLUE),
-        "5,0": pbtn("Gondel\nPumpe", "starlight", "gondelpumpe", 10, GREEN),
-        "7,0": pbtn("Arm\nPumpe", "starlight", "armpumpe", 10, GREEN),
-        "2,1": pbtn("Gondola\nSpeed -", "starlight", "gondolaspeeddown", 10, ORANGE),
-        "3,1": pbtn("Gondola\nSpeed +", "starlight", "gondolaspeedup", 10, ORANGE),
-        "4,1": pbtn("Gondola\nBremse", "starlight", "gondolabremse", 10, YELLOW),
-        "5,1": pbtn("Gondel 0", "starlight", "gondel0", 10, BLUE),
-        "2,2": pbtn("Arm\nSpeed -", "starlight", "armspeeddown", 10, ORANGE),
-        "3,2": pbtn("Arm\nSpeed +", "starlight", "armspeedup", 10, ORANGE),
-        "4,2": pbtn("Arm\nBremse", "starlight", "armbremse", 10, YELLOW),
-        "5,2": pbtn("Arm 0", "starlight", "arm0", 10, BLUE),
-        "2,3": pbtn("Platform\nHoch", "starlight", "platformup", 10, GREEN),
-        "3,3": pbtn("Platform\nRunter", "starlight", "platformdown", 10, RED),
-        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
-    }},
-    {"name": "XPlosion + FunHouse", "buttons": {
-        "0,0": pbtn("NOT-AUS\nXPlosion", "xplosion", "emergencystop", 9, RED),
-        "1,0": pbtn("Anlage\nEIN/AUS", "xplosion", "onoff", 10, GREEN),
-        "2,0": pbtn("Reset", "xplosion", "reset", 10, YELLOW),
-        "3,0": pbtn("Freigabe", "xplosion", "freigabe", 10, GREEN),
-        "0,1": pbtn("Hoch", "xplosion", "up", 11, ORANGE),
-        "1,1": pbtn("Runter", "xplosion", "down", 11, ORANGE),
-        "2,1": pbtn("Null", "xplosion", "zero", 11, BLUE),
-        "0,2": pbtn("NOT-AUS\nFunHouse", "funhouse", "emergencystop", 9, RED),
-        "1,2": pbtn("Anlage\nEIN/AUS", "funhouse", "onoff", 10, GREEN),
-        "3,2": pbtn("Drehsch.\n1.OG", "funhouse", "turntable1", 9, PURPLE),
-        "4,2": pbtn("Drehsch.\n2.OG", "funhouse", "turntable2", 9, PURPLE),
-        "5,2": pbtn("Drehsch.\nDach", "funhouse", "turntable3", 9, PURPLE),
-        "6,2": pbtn("Laufband\n1.OG", "funhouse", "conveyor1", 9, CYAN),
-        "7,2": pbtn("Laufband\n2.OG", "funhouse", "conveyor2", 9, CYAN),
-        "3,3": pbtn("Vibrier-\nplatte", "funhouse", "vibrate1", 9, PINK),
-        "4,3": pbtn("Dreh-\ntunnel", "funhouse", "tunnel1", 9, PINK),
-    }},
-    {"name": "Rotator", "buttons": {
-        "0,0": pbtn("NOT-\nAUS", "rotator", "emergencystop", 12, RED),
-        "1,0": pbtn("Anlage\nEIN/AUS", "rotator", "onoff", 10, GREEN),
-        "2,0": pbtn("Reset", "rotator", "reset", 10, YELLOW),
-        "3,0": pbtn("Park", "rotator", "park", 10, BLUE),
-        "4,0": pbtn("Pumpe\nAN/AUS", "rotator", "pumpe", 10, GREEN),
-        "5,0": pbtn("Kompr.\nAN/AUS", "rotator", "kompressor", 10, GREEN),
-        "0,1": pbtn("Platte\nSpeed -", "rotator", "plattespeeddown", 10, ORANGE),
-        "1,1": pbtn("Platte\nSpeed +", "rotator", "plattespeedup", 10, ORANGE),
-        "2,1": pbtn("Platte 0", "rotator", "platte0", 10, BLUE),
-        "3,1": pbtn("Platte\nAN/AUS", "rotator", "platte", 10, GREEN),
-        "0,2": pbtn("Kreuz\nSpeed -", "rotator", "kreuzspeeddown", 10, ORANGE),
-        "1,2": pbtn("Kreuz\nSpeed +", "rotator", "kreuzspeedup", 10, ORANGE),
-        "2,2": pbtn("Kreuz 0", "rotator", "kreuz0", 10, BLUE),
-        "3,2": pbtn("Kreuz\nAN/AUS", "rotator", "kreuz", 10, GREEN),
-        "5,1": pbtn("Inverter\nSpeed -", "rotator", "inverterspeeddown", 9, PURPLE),
-        "6,1": pbtn("Inverter\nSpeed +", "rotator", "inverterspeedup", 9, PURPLE),
-        "7,1": pbtn("Invers. 0", "rotator", "inverter0", 10, BLUE),
-        "5,2": pbtn("Inverter\nAN/AUS", "rotator", "inverter", 9, GREEN),
-        "0,3": pbtn("Buegel\nAUF/ZU", "rotator", "buegel", 10, GREEN),
-        "2,3": pbtn("Hub\nHoch", "rotator", "hubup", 10, GREEN),
-        "3,3": pbtn("Hub\nStop", "rotator", "hubstop", 10, YELLOW),
-        "4,3": pbtn("Hub\nRunter", "rotator", "hubdown", 10, RED),
-        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
-    }},
-    {"name": "Turaka + Standard", "buttons": {
-        "0,0": pbtn("NOT-AUS\nTuraka", "turaka", "emergencystop", 9, RED),
-        "1,0": pbtn("Anlage\nEIN/AUS", "turaka", "onoff", 10, GREEN),
-        "2,0": pbtn("Reset", "turaka", "reset", 10, YELLOW),
-        "3,0": pbtn("Speed -", "turaka", "speeddown", 10, ORANGE),
-        "4,0": pbtn("Speed +", "turaka", "speedup", 10, ORANGE),
-        "5,0": pbtn("Richtung", "turaka", "direction", 10, PURPLE),
-        "0,1": pbtn("Start", "turaka", "start", 11, GREEN),
-        "1,1": pbtn("Stop", "turaka", "stop", 11, RED),
-        "2,1": pbtn("Platform", "turaka", "platform", 10, BLUE),
-        "3,1": pbtn("Park\nWagen 1", "turaka", "parkcar1", 10, BLUE),
-        "4,1": pbtn("Park\nWagen 2", "turaka", "parkcar2", 10, BLUE),
-        "0,2": pbtn("Ein-/Aus-\nsteigen", "standard", "enterleave", 9, GREEN),
-        "1,2": pbtn("Push\nto Talk", "standard", "pushtotalk", 10, YELLOW),
-        "2,2": pbtn("Naechster\nSitz", "standard", "nextseat", 10, BLUE),
-        "3,2": pbtn("Letzter\nSitz", "standard", "lastseat", 10, BLUE),
-        "4,2": pbtn("Kamera\nwechsel", "standard", "camera", 10, PURPLE),
-        "5,2": pbtn("Chat", "standard", "chat", 11, WHITE),
-        "6,2": pbtn("Ingame\nVoice", "standard", "ingamevoice", 10, YELLOW),
-        "0,3": pbtn("Menue", "settings", "menu", 10, WHITE),
-        "1,3": pbtn("Speed\nHoch", "settings", "speedup", 10, GREEN),
-        "2,3": pbtn("Speed\nRunter", "settings", "speeddown", 10, RED),
-        "2,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "3,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
-    }},
-    {"name": "LightEffect", "buttons": {
-        "0,0": pbtn("Preset 1", "lighteffect", "preset1", 10, PURPLE),
-        "1,0": pbtn("Preset 2", "lighteffect", "preset2", 10, PURPLE),
-        "2,0": pbtn("Preset 3", "lighteffect", "preset3", 10, PURPLE),
-        "3,0": pbtn("Preset 4", "lighteffect", "preset4", 10, PURPLE),
-        "4,0": pbtn("Preset 5", "lighteffect", "preset5", 10, PURPLE),
-        "5,0": pbtn("Preset 6", "lighteffect", "preset6", 10, PURPLE),
-        "6,0": pbtn("Preset 7", "lighteffect", "preset7", 10, PURPLE),
-        "7,0": pbtn("Preset 8", "lighteffect", "preset8", 10, PURPLE),
-        "0,1": pbtn("Preset 9", "lighteffect", "preset9", 10, PURPLE),
-        "1,1": pbtn("Light 1", "lighteffect", "light1", 10, CYAN),
-        "2,1": pbtn("Light 2", "lighteffect", "light2", 10, CYAN),
-        "3,1": pbtn("Light 3", "lighteffect", "light3", 10, CYAN),
-        "4,1": pbtn("Light 4", "lighteffect", "light4", 10, CYAN),
-        "5,1": pbtn("Light 5", "lighteffect", "light5", 10, CYAN),
-        "6,1": pbtn("Light 6", "lighteffect", "light6", 10, CYAN),
-        "7,1": pbtn("Light 7", "lighteffect", "light7", 10, CYAN),
-        "0,2": pbtn("Light 8", "lighteffect", "light8", 10, CYAN),
-        "1,2": pbtn("Light 9", "lighteffect", "light9", 10, CYAN),
-        "2,2": pbtn("Alle\nAUS", "lighteffect", "alloff", 10, RED),
-        "3,2": pbtn("Strobo", "lighteffect", "strobo", 10, YELLOW),
-        "4,2": pbtn("LED\nStrobe", "lighteffect", "ledstrobe", 10, YELLOW),
-        "5,2": pbtn("Color\nStrobe", "lighteffect", "colorstrobe", 10, YELLOW),
-        "6,2": pbtn("Spot\nAN/AUS", "lighteffect", "spotonoff", 10, GREEN),
-        "7,2": pbtn("SpotColor\nHoch", "lighteffect", "spotcolorup", 10, ORANGE),
-        "0,3": pbtn("SpotColor\nRunter", "lighteffect", "spotcolordown", 10, ORANGE),
-        "1,3": pbtn("Nebel", "lighteffect", "fog", 10, BLUE),
-        "2,3": pbtn("Flamme", "lighteffect", "flame", 10, RED),
-        "3,3": pbtn("Seifenbl.", "lighteffect", "bubbles", 10, BLUE),
-        "4,3": pbtn("Horn", "lighteffect", "horn", 11, YELLOW),
-        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
-    }},
-    {"name": "MovingHeads + Sound", "buttons": {
-        "0,0": pbtn("Moving\nHead AN", "movingheads", "onoff", 10, GREEN),
-        "1,0": pbtn("MH\nLicht", "movingheads", "light", 10, YELLOW),
-        "2,0": pbtn("MH Light\nSync", "movingheads", "lightsync", 10, BLUE),
-        "3,0": pbtn("MH Color\nStrobe", "movingheads", "colorstrobe", 10, PURPLE),
-        "0,1": pbtn("Color\nHoch", "movingheads", "colorup", 10, ORANGE),
-        "1,1": pbtn("Color\nRunter", "movingheads", "colordown", 10, ORANGE),
-        "2,1": pbtn("Progr.\nHoch", "movingheads", "programup", 10, CYAN),
-        "3,1": pbtn("Progr.\nRunter", "movingheads", "programdown", 10, CYAN),
-        "4,1": pbtn("Gobos\nHoch", "movingheads", "gobosup", 10, PINK),
-        "5,1": pbtn("Gobos\nRunter", "movingheads", "gobosdown", 10, PINK),
-        "0,2": pbtn("Play /\nPause", "sound", "playpause", 10, GREEN),
-        "1,2": pbtn("Naechster\nTrack", "sound", "next", 10, BLUE),
-        "2,2": pbtn("Vorher.\nTrack", "sound", "prev", 10, BLUE),
-        "3,2": pbtn("Mikro", "sound", "micro", 10, YELLOW),
-        "4,2": pbtn("Mikro\nEcho", "sound", "microecho", 10, PURPLE),
-        "5,3": pbtn("Unofficial\nby BlackMautz", "settings", "credits", 7, WHITE),
-        "6,3": pbtn("Schrift\n[ AN ]", "settings", "showtitle", 10, CYAN),
-        "7,3": pbtn("Repeat\\nSchnell", "settings", "repeatspeed", 10, CYAN),
-    }},
-    {"name": "Jingles", "buttons": {
-        "0,0": pbtn("Jingle 1", "jingles", "jingle1", 10, YELLOW),
-        "1,0": pbtn("Jingle 2", "jingles", "jingle2", 10, YELLOW),
-        "2,0": pbtn("Jingle 3", "jingles", "jingle3", 10, YELLOW),
-        "3,0": pbtn("Jingle 4", "jingles", "jingle4", 10, YELLOW),
-        "4,0": pbtn("Jingle 5", "jingles", "jingle5", 10, YELLOW),
-        "5,0": pbtn("Jingle 6", "jingles", "jingle6", 10, YELLOW),
-        "6,0": pbtn("Jingle 7", "jingles", "jingle7", 10, ORANGE),
-        "7,0": pbtn("Jingle 8", "jingles", "jingle8", 10, ORANGE),
-        "0,1": pbtn("Jingle 9", "jingles", "jingle9", 10, ORANGE),
-        "1,1": pbtn("Jingle 10", "jingles", "jingle10", 10, ORANGE),
-        "2,1": pbtn("Jingle 11", "jingles", "jingle11", 10, ORANGE),
-        "3,1": pbtn("Jingle 12", "jingles", "jingle12", 10, ORANGE),
-        "0,2": pbtn("Deck 1", "jingles", "deck1", 10, PURPLE),
-        "1,2": pbtn("Deck 2", "jingles", "deck2", 10, PURPLE),
-        "2,2": pbtn("Deck 3", "jingles", "deck3", 10, PURPLE),
-        "3,2": pbtn("Deck 4", "jingles", "deck4", 10, PURPLE),
-        "4,2": pbtn("Deck 5", "jingles", "deck5", 10, PURPLE),
-        "5,2": pbtn("Deck 6", "jingles", "deck6", 10, PURPLE),
-        "6,2": pbtn("Deck 7", "jingles", "deck7", 10, CYAN),
-        "7,2": pbtn("Deck 8", "jingles", "deck8", 10, CYAN),
-        "0,3": pbtn("Deck 9", "jingles", "deck9", 10, CYAN),
-        "1,3": pbtn("Deck 10", "jingles", "deck10", 10, CYAN),
-        "2,3": pbtn("Deck 11", "jingles", "deck11", 10, CYAN),
-        "3,3": pbtn("Deck 12", "jingles", "deck12", 10, CYAN),
-    }},
-]
-
-
-# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 # Hilfsfunktionen
 # â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 
@@ -563,25 +344,14 @@ def generate_map_entries():
 
 
 def generate_title_entries():
-    """Generiert C# Dictionary-Eintraege fuer Button-Titel aus PAGES (formatiert mit Zeilenumbruechen)."""
+    """Generiert C# Dictionary-Eintraege fuer Button-Titel aus RIDES."""
     lines = []
-    seen = set()
-    # Zuerst die schoen formatierten Titel aus den PAGES nehmen
-    for page_def in PAGES:
-        for pos, btn in page_def["buttons"].items():
-            uuid = btn["UUID"]
-            title = btn["States"][0]["Title"]
-            safe_title = title.replace('\\', '\\\\').replace('"', '\\"').replace('\n', '\\n')
-            lines.append(f'        tm["{uuid}"]="{safe_title}";')
-            seen.add(uuid)
-    # Dann fehlende aus RIDES ergaenzen (falls ein Button nicht in PAGES ist)
     for ride_id, ride_name, _, actions in RIDES:
         for action in actions:
             action_id, label, _, mode = action
             uuid = f"{PLUGIN_ID}.{ride_id}.{action_id}"
-            if uuid not in seen:
-                safe_label = label.replace('\\', '\\\\').replace('"', '\\"')
-                lines.append(f'        tm["{uuid}"]="{safe_label}";')
+            safe_label = label.replace('\\', '\\\\').replace('"', '\\"')
+            lines.append(f'        tm["{uuid}"]="{safe_label}";')
     return '\n'.join(lines)
 
 
@@ -1051,62 +821,10 @@ def generate_manifest():
         "SDKVersion": 2,
         "OS": [{"Platform": "windows", "MinimumVersion": "10"}],
         "Software": {"MinimumVersion": "5.0"},
-        "Profiles": [{
-            "Name": "Fairground Online",
-            "DeviceType": 2,  # Stream Deck XL = 2
-            "DontAutoSwitchWhenInstalled": True,
-            "ReadOnly": False,
-        }],
     }
     return manifest
 
 
-def generate_profile():
-    """Generiert das eingebettete Profil (Profiles/Fairground Online.sdProfile/)."""
-    profile_dir = os.path.join(SDPLUGIN_DIR, "Profiles", "Fairground Online.sdProfile")
-    profiles_sub = os.path.join(profile_dir, "Profiles")
-    os.makedirs(os.path.join(profile_dir, "Images"), exist_ok=True)
-    os.makedirs(profiles_sub, exist_ok=True)
-
-    page_guids = []
-    for page_def in PAGES:
-        page_guid = str(uuid_mod.uuid4())
-        page_guids.append(page_guid)
-
-        page_id = ''.join(random.choices(string.ascii_uppercase + string.digits, k=31)) + 'Z'
-        page_dir = os.path.join(profiles_sub, page_id)
-        os.makedirs(os.path.join(page_dir, "Images"), exist_ok=True)
-
-        page_manifest = {
-            "Controllers": [{
-                "Actions": page_def["buttons"],
-                "Type": "Keypad",
-            }],
-            "Icon": "",
-            "Name": page_def["name"],
-        }
-        with open(os.path.join(page_dir, "manifest.json"), "w", encoding="utf-8") as f:
-            json.dump(page_manifest, f, ensure_ascii=False)
-
-    profile_manifest = {
-        "AppIdentifier": "",
-        "Device": {
-            "Model": DEVICE_MODEL,
-            "UUID": DEVICE_UUID,
-        },
-        "Name": "Fairground Online",
-        "Pages": {
-            "Current": page_guids[0],
-            "Default": page_guids[0],
-            "Pages": page_guids,
-        },
-        "Version": "2.0",
-    }
-    with open(os.path.join(profile_dir, "manifest.json"), "w", encoding="utf-8") as f:
-        json.dump(profile_manifest, f, ensure_ascii=False)
-
-
-# â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 # HAUPTPROGRAMM
 # â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
 if __name__ == "__main__":
@@ -1138,7 +856,7 @@ if __name__ == "__main__":
     os.makedirs(SDPLUGIN_DIR, exist_ok=True)
 
     # 1) C# Quellcode generieren
-    print("[1/6] C# Quellcode generieren...")
+    print("[1/5] C# Quellcode generieren...")
     cs_path = os.path.join(SDPLUGIN_DIR, "plugin.cs")
     with open(cs_path, "w", encoding="utf-8") as f:
         f.write(generate_cs())
@@ -1148,7 +866,7 @@ if __name__ == "__main__":
     print(f"      {total_actions} Aktionen definiert")
 
     # 2) Kompilieren
-    print("[2/6] Kompilieren mit csc.exe...")
+    print("[2/5] Kompilieren mit csc.exe...")
     exe_path = os.path.join(SDPLUGIN_DIR, "plugin.exe")
     result = subprocess.run(
         [CSC_PATH, f"/out:{exe_path}", "/target:exe",
@@ -1167,7 +885,7 @@ if __name__ == "__main__":
     # os.remove(cs_path)
 
     # 3) manifest.json
-    print("[3/6] manifest.json generieren...")
+    print("[3/5] manifest.json generieren...")
     manifest = generate_manifest()
     with open(os.path.join(SDPLUGIN_DIR, "manifest.json"), "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
@@ -1178,7 +896,7 @@ if __name__ == "__main__":
         f.write(PLUGIN_VERSION)
 
     # 4) Icons erstellen
-    print("[4/6] Icons erstellen...")
+    print("[4/5] Icons erstellen...")
     imgs_dir = os.path.join(SDPLUGIN_DIR, "imgs")
     os.makedirs(imgs_dir, exist_ok=True)
 
@@ -1241,14 +959,8 @@ if __name__ == "__main__":
 
     print(f"      8 Icon-Dateien + {icon_count} Action-Icons kopiert")
 
-    # 5) Eingebettetes Profil
-    print("[5/6] Eingebettetes Profil erstellen...")
-    generate_profile()
-    total_buttons = sum(len(p["buttons"]) for p in PAGES)
-    print(f"      {len(PAGES)} Seiten, {total_buttons} Buttons")
-
-    # 6) Als .streamDeckPlugin verpacken (ZIP)
-    print("[6/6] Als .streamDeckPlugin verpacken...")
+    # 5) Als .streamDeckPlugin verpacken (ZIP)
+    print("[5/5] Als .streamDeckPlugin verpacken...")
     if os.path.exists(OUTPUT_FILE):
         os.remove(OUTPUT_FILE)
 
@@ -1268,10 +980,10 @@ if __name__ == "__main__":
         f"{PLUGIN_ID}.sdPlugin"
     )
     if os.path.exists(installed_dir):
-        print("[7/7] Direkt in installierten Plugin-Ordner kopieren...")
+        print("[+] Direkt in installierten Plugin-Ordner kopieren...")
         # plugin.exe kopieren
         shutil.copy2(exe_path, os.path.join(installed_dir, "plugin.exe"))
-        # manifest.json aktualisieren (DeviceType fix)
+        # manifest.json aktualisieren
         shutil.copy2(
             os.path.join(SDPLUGIN_DIR, "manifest.json"),
             os.path.join(installed_dir, "manifest.json")
@@ -1312,8 +1024,6 @@ if __name__ == "__main__":
     print(f"  Datei: {OUTPUT_FILE}")
     print(f"  Groesse: {plugin_size:,} Bytes")
     print(f"  Aktionen: {total_actions}")
-    print(f"  Seiten: {len(PAGES)}")
-    print(f"  Buttons: {total_buttons}")
     print(f"\nInstallation:")
     print(f"  Doppelklick auf 'Fairground_Online.streamDeckPlugin'")
     print(f"  Stream Deck App installiert die Erweiterung automatisch!")

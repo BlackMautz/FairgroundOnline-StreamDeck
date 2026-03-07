@@ -1,14 +1,15 @@
-# Fairground Online – Stream Deck XL Plugin
+# Fairground Online – Stream Deck Plugin
 
 ![Fairground Online Stream Deck Plugin](Githubreadmybild.png)
 
-Ein natives Stream Deck XL Plugin für [Fairground Online](https://store.steampowered.com/app/3310530/Fairground_Online/), das alle Fahrgeschäfte, Licht, Sound und Effekte direkt über den Stream Deck steuert.
+Ein natives Stream Deck Plugin für [Fairground Online](https://store.steampowered.com/app/3310530/Fairground_Online/), das alle Fahrgeschäfte, Licht, Sound und Effekte direkt über den Stream Deck steuert. Funktioniert mit **allen Stream Deck Modellen** (MK.2, XL, Mini, Plus, etc.).
 
 **Inoffiziell erstellt von BlackMautz** – dieses Plugin ist kein offizielles Produkt des Spielentwicklers.
 
-![Stream Deck XL](https://img.shields.io/badge/Stream%20Deck-XL-blue)
+![Stream Deck](https://img.shields.io/badge/Stream%20Deck-Alle%20Modelle-blue)
 ![Windows](https://img.shields.io/badge/Platform-Windows-lightgrey)
 ![.NET 4.0](https://img.shields.io/badge/.NET-4.0-purple)
+![Auto-Update](https://img.shields.io/badge/Auto--Update-✓-green)
 
 ## Features
 
@@ -20,8 +21,7 @@ Ein natives Stream Deck XL Plugin für [Fairground Online](https://store.steampo
 - **12 Jingles + 12 Decks**
 - **Standard-Steuerung**: Ein-/Aussteigen, Kamerawechsel, Chat, Push to Talk, Sitzplatzwechsel
 - **Settings**: Menü, Speed-Steuerung, Repeat Speed (3 Stufen), Schrift AN/AUS
-- **8 vorkonfigurierte Seiten** mit übersichtlichem Button-Layout
-- **157 Aktionen** in 12 Kategorien mit eigenen Kategorie-Icons
+- **158 Aktionen** in 12 Kategorien mit eigenen Kategorie-Icons
 - **310+ individuelle Button-Icons** für jede Aktion
 - **Toggle-Buttons** mit [AN]/[AUS] Statusanzeige
 - **HoldToggle-Modus** (z.B. Mikrofon Echo: 1x drücken = an, nochmal drücken = aus)
@@ -39,10 +39,9 @@ Das Plugin wird komplett durch ein Python-Skript (`create_fairground_plugin.py`)
 1. Generiert C# Quellcode für das native Stream Deck Plugin
 2. Kompiliert mit dem .NET Framework 4.0 C# Compiler
 3. Erstellt alle Icons, Kategorie-Bilder und Overlay-Bilder
-4. Baut die manifest.json mit allen 157 Aktionen in 12 Kategorien
-5. Erstellt ein eingebettetes Profil mit 8 Seiten und 166 Buttons
-6. Verpackt alles als `.streamDeckPlugin` Installationspaket
-7. Kopiert direkt in den installierten Plugin-Ordner und startet Stream Deck neu
+4. Baut die manifest.json mit allen 158 Aktionen in 12 Kategorien
+5. Verpackt alles als `.streamDeckPlugin` Installationspaket
+6. Kopiert direkt in den installierten Plugin-Ordner und startet Stream Deck neu
 
 Die Tasteneingaben werden über `keybd_event` mit Scan-Codes gesendet – das funktioniert unabhängig vom Tastaturlayout.
 
@@ -50,8 +49,8 @@ Die Tasteneingaben werden über `keybd_event` mit Scan-Codes gesendet – das fu
 
 - Windows 10 oder höher
 - [Elgato Stream Deck Software](https://www.elgato.com/downloads) (Version 5.0+)
-- Stream Deck XL
-- Python 3.x (zum Bauen des Plugins)
+- Elgato Stream Deck (alle Modelle)
+- Python 3.x (nur zum Bauen des Plugins)
 - .NET Framework 4.0 (in Windows enthalten)
 
 ## Installation
@@ -79,21 +78,6 @@ Das Skript erstellt `Fairground_Online.streamDeckPlugin`. Falls das Plugin berei
 | Sound | Play/Pause, Track-Wechsel, Mikrofon, Mikrofon Echo |
 | Jingles | 12 Jingles + 12 Decks |
 | Settings | Menü, Speed Hoch/Runter, Repeat Speed, Schrift AN/AUS |
-
-## Seiten-Layout
-
-| Seite | Inhalt |
-|-------|--------|
-| 1 | BreakDance |
-| 2 | StarLight |
-| 3 | XPlosion + FunHouse |
-| 4 | Rotator |
-| 5 | Turaka + Standard |
-| 6 | LightEffect |
-| 7 | MovingHeads + Sound |
-| 8 | Jingles (1-12) + Decks (1-12) |
-
-![Stream Deck Layout](readme2.png)
 
 ## Button-Modi
 
@@ -125,6 +109,10 @@ Die Datei `fairground_input_actions.json` enthält die vollständige Tastenbeleg
 ## Lizenz
 
 MIT License
+
+## Auto-Updater
+
+Das Plugin prüft beim Start automatisch auf neue Versionen auf GitHub. Wenn ein Update verfügbar ist, wird es heruntergeladen und installiert – kein manuelles Update nötig.
 
 ## Autor
 
