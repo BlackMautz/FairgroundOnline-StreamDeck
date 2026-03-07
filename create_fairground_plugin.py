@@ -21,7 +21,7 @@ PLUGIN_ID = "com.blackmautz.fairground"
 PLUGIN_NAME = "Fairground Online"
 PLUGIN_AUTHOR = "BlackMautz"
 PLUGIN_DESC = "Steuerung für Fairground Online Fahrgeschäfte"
-PLUGIN_VERSION = "1.1.0"
+PLUGIN_VERSION = "1.2.0"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 SDPLUGIN_DIR = os.path.join(BASE_DIR, f"{PLUGIN_ID}.sdPlugin")
@@ -82,6 +82,7 @@ RIDES = [
         ("kreuz", "Kreuz", ("h", "j"), "toggle"),
         ("kreuztippen", "Kreuz Tip", "b", True),
         ("gondelbremse", "Gondelbremse", "n", True),
+        ("autoshow", "AUTO\\nSHOW", None, "autoshow"),
     ]),
     ("starlight", "StarLight", (50, 100, 200), [
         ("emergencystop", "NOT-AUS", "backspace", True),
@@ -335,7 +336,7 @@ def generate_map_entries():
                 flags = 8 | (1 if ext else 0)
                 lines.append(f'        km["{uuid}"]=new KI{{s=0x{scan_main:02X},f={flags},h=true,m=0x{scan_mod:02X}}};')
                 lines.append(f'        rp.Add("{uuid}");')
-            elif mode == "system":
+            elif mode in ("system", "autoshow"):
                 pass
             else:
                 scan = SCAN[key_data]
@@ -410,6 +411,14 @@ class P
     static Thread timerThread = null;
     static int timerGen = 0;
     static DateTime timerKeyDown = DateTime.MinValue;
+
+    // AutoShow
+    static bool showRunning = false;
+    static int showGen = 0;
+    static string showCtx = null;
+    static DateTime showKeyDown = DateTime.MinValue;
+    static Thread showThread = null;
+    static int selectedTour = 0;
 
     static void Log(string msg)
     {{
@@ -595,6 +604,14 @@ class P
                 SetImg(context, false);
                 SetTtl(context, "Unofficial\\nby BlackMautz");
             }}
+            else if (action == "{PLUGIN_ID}.breakdance.autoshow")
+            {{
+                showCtx = context;
+                SetImg(context, false);
+                string tv2 = V(j, "tour");
+                if (tv2 != null) {{ int pt2; if (int.TryParse(tv2, out pt2) && pt2 >= 0 && pt2 <= 5) selectedTour = pt2; }}
+                SetTtl(context, showRunning ? "LAEUFT..." : "AUTO\\nSHOW");
+            }}
             else if (tg.ContainsKey(action))
             {{
                 bool isOn = ts.ContainsKey(action) && ts[action];
@@ -696,6 +713,11 @@ class P
             SetTtl(context, "Repeat\\n" + repeatNm[repeatLv]);
             Log("RepeatSpeed: " + repeatNm[repeatLv] + " " + repeatMs + "ms");
         }}
+        else if (ev == "didReceiveSettings" && action == "{PLUGIN_ID}.breakdance.autoshow")
+        {{
+            string tv = V(j, "tour");
+            if (tv != null) {{ int pt; if (int.TryParse(tv, out pt) && pt >= 0 && pt <= 5) {{ selectedTour = pt; string tnm = pt < 5 ? tourNm[pt] : "Zufall"; Log("Tour gewaehlt: " + tnm); if (showCtx != null && !showRunning) SetTtl(showCtx, tnm + "\\\\n" + (pt < 5 ? (pt+1) + "/5" : "\\U0001F3B2")); }} }}
+        }}
         else if (ev == "didReceiveSettings" && action == "{PLUGIN_ID}.timer.startstop")
         {{
             string dv = V(j, "duration");
@@ -733,6 +755,35 @@ class P
                 timerPaused = !timerPaused;
                 Log("Timer " + (timerPaused ? "pausiert" : "fortgesetzt") + ": " + timerRemaining + "s");
                 if (timerCtx != null) SetTtl(timerCtx, TFmt());
+            }}
+        }}
+        else if (ev == "keyDown" && action == "{PLUGIN_ID}.breakdance.autoshow" && context != null)
+        {{
+            showKeyDown = DateTime.Now;
+        }}
+        else if (ev == "keyUp" && action == "{PLUGIN_ID}.breakdance.autoshow" && context != null)
+        {{
+            double held = (DateTime.Now - showKeyDown).TotalMilliseconds;
+            if (showRunning)
+            {{
+                showGen++;
+                showRunning = false;
+                Log("AutoShow: Abgebrochen (held=" + held + "ms)");
+                SHTitle("ABBRUCH!");
+                SetImg(showCtx, false);
+                var ct = new Thread(() => {{ Thread.Sleep(3000); if (!showRunning) SHTitle("AUTO\\nSHOW"); }});
+                ct.IsBackground = true;
+                ct.Start();
+            }}
+            else
+            {{
+                showRunning = true;
+                int gen = ++showGen;
+                SetImg(showCtx, true);
+                showThread = new Thread(() => RunBDShow(gen));
+                showThread.IsBackground = true;
+                showThread.Start();
+                Log("AutoShow: BreakDance gestartet");
             }}
         }}
         else if (ev == "keyDown" && action != null && km.ContainsKey(action))
@@ -832,6 +883,414 @@ class P
         }}
     }}
 
+    static void SHTap(byte scan, uint flags, byte mod)
+    {{
+        if (mod > 0) keybd_event(0, mod, 8u, UIntPtr.Zero);
+        keybd_event(0, scan, flags, UIntPtr.Zero);
+        Thread.Sleep(50);
+        keybd_event(0, scan, flags | 2u, UIntPtr.Zero);
+        if (mod > 0) keybd_event(0, mod, 8u | 2u, UIntPtr.Zero);
+    }}
+
+    static bool SHWait(int ms, int gen)
+    {{
+        for (int i = 0; i < ms && showGen == gen; i += 50)
+            Thread.Sleep(50);
+        return showGen == gen;
+    }}
+
+    static void SHRepeat(byte scan, uint flags, int durationMs, int intervalMs, int gen)
+    {{
+        int elapsed = 0;
+        while (elapsed < durationMs && showGen == gen)
+        {{
+            keybd_event(0, scan, flags, UIntPtr.Zero);
+            Thread.Sleep(30);
+            keybd_event(0, scan, flags | 2u, UIntPtr.Zero);
+            int w = intervalMs - 30;
+            if (w > 0) Thread.Sleep(w);
+            elapsed += intervalMs;
+        }}
+    }}
+
+    // Taste gehalten fuer durationMs (fuer Effekte: Nebel, Strobo, Flamme, Gondelbremse, Hupe)
+    static void SHHold(byte scan, uint flags, int durationMs, int gen)
+    {{
+        keybd_event(0, scan, flags, UIntPtr.Zero);
+        SHWait(durationMs, gen);
+        keybd_event(0, scan, flags | 2u, UIntPtr.Zero);
+    }}
+
+    // Mehrere Tasten GLEICHZEITIG gehalten! (z.B. Nebel+Flamme+Strobo)
+    static void SHHoldMulti(byte[] scans, uint flags, int durationMs, int gen)
+    {{
+        foreach (byte s in scans) keybd_event(0, s, flags, UIntPtr.Zero);
+        SHWait(durationMs, gen);
+        foreach (byte s in scans) keybd_event(0, s, flags | 2u, UIntPtr.Zero);
+    }}
+
+    // Modifier+Taste gehalten (fuer Seifenblasen = Ctrl+C)
+    static void SHModHold(byte mod, byte scan, uint flags, int durationMs, int gen)
+    {{
+        keybd_event(0, mod, 8u, UIntPtr.Zero);
+        keybd_event(0, scan, flags, UIntPtr.Zero);
+        SHWait(durationMs, gen);
+        keybd_event(0, scan, flags | 2u, UIntPtr.Zero);
+        keybd_event(0, mod, 8u | 2u, UIntPtr.Zero);
+    }}
+
+    static void SHTitle(string t) {{ if (showCtx != null) SetTtl(showCtx, t); }}
+
+    // === TOUR KONFIGURATION ===
+    // 5 Touren: Effekte werden per Random aus Pools gewaehlt!
+    static string[] tourNm = {{ "Klassisch", "Pirouette", "Nebelwand", "Lichtgewitter", "Inferno" }};
+    static bool[] tourKF = {{ true, false, true, false, true }};   // Kreuz bremst zuerst?
+    static bool[] tourSB = {{ true, true, true, false, true }};    // Seifenblasen?
+
+    // Effekt-Pools (Mild=Einzeln/LED, Normal=2er Kombos, Nebel/Strobo=Schwerpunkt, Heavy=Alles max)
+    static byte[][] fxMild = {{ new byte[]{{0x2E}}, new byte[]{{0x0C}}, new byte[]{{0x0C, 0x2E}} }};
+    static byte[][] fxNormal = {{ new byte[]{{0x39, 0x20}}, new byte[]{{0x2E, 0x20}}, new byte[]{{0x0C, 0x2E}}, new byte[]{{0x39, 0x2E}} }};
+    static byte[][] fxNebel = {{ new byte[]{{0x20}}, new byte[]{{0x20, 0x2E}}, new byte[]{{0x39, 0x20}}, new byte[]{{0x39, 0x20, 0x2E}} }};
+    static byte[][] fxStrobo = {{ new byte[]{{0x39}}, new byte[]{{0x0C}}, new byte[]{{0x39, 0x0C}}, new byte[]{{0x39, 0x2E}} }};
+    static byte[][] fxHeavy = {{ new byte[]{{0x39, 0x20, 0x2E}}, new byte[]{{0x39, 0x20}}, new byte[]{{0x20, 0x2E}}, new byte[]{{0x39, 0x2E}} }};
+
+    // Tour -> Pool: Vollgas-Effekte / Mid-Speed-Effekte
+    static byte[][][] tourVP = {{ fxNormal, fxNormal, fxNebel, fxStrobo, fxHeavy }};
+    static byte[][][] tourMP = {{ fxMild, fxMild, fxMild, fxStrobo, fxNormal }};
+
+    static string FXName(byte[] fx)
+    {{
+        if (fx.Length >= 3) return "ALLES\\\\nAN!";
+        if (fx.Length == 1)
+        {{
+            switch(fx[0])
+            {{
+                case 0x20: return "NEBEL!";
+                case 0x2E: return "FLAMME!";
+                case 0x39: return "STROBO!";
+                case 0x0C: return "LED!";
+                default: return "FX!";
+            }}
+        }}
+        string a = "", b = "";
+        switch(fx[0]) {{ case 0x20: a="NEBEL"; break; case 0x2E: a="FLAMME"; break; case 0x39: a="STROBO"; break; case 0x0C: a="LED"; break; default: a="FX"; break; }}
+        switch(fx[1]) {{ case 0x20: b="NEBEL"; break; case 0x2E: b="FLAMME"; break; case 0x39: b="STROBO"; break; case 0x0C: b="LED"; break; default: b="FX"; break; }}
+        return a + "+\\\\n" + b + "!";
+    }}
+
+    static void PlayFX(byte[] fx, int ms, int gen)
+    {{
+        SHTitle(FXName(fx));
+        if (fx.Length == 1) SHHold(fx[0], 8, ms, gen);
+        else SHHoldMulti(fx, 8, ms, gen);
+    }}
+
+    static byte[] PickFX(byte[][] pool, Random rng)
+    {{
+        return pool[rng.Next(pool.Length)];
+    }}
+
+    static void RunBDShow(int gen)
+    {{
+        Random rng = new Random();
+        int t = selectedTour;
+        if (t == 5) t = rng.Next(5);
+        if (t < 0 || t > 4) t = 0;
+
+        // Tour-abhaengige Asymmetrie
+        byte brkA = tourKF[t] ? (byte)0x22 : (byte)0x21;  // Kreuz- oder Platte-
+        byte accA = tourKF[t] ? (byte)0x14 : (byte)0x13;  // Kreuz+ oder Platte+
+        byte brkB = tourKF[t] ? (byte)0x21 : (byte)0x22;  // andere Seite
+        byte accB = tourKF[t] ? (byte)0x13 : (byte)0x14;
+        string nmA = tourKF[t] ? "Kreuz" : "Platte";
+        string nmB = tourKF[t] ? "Platte" : "Kreuz";
+        byte[][] vP = tourVP[t]; // Vollgas-Pool
+        byte[][] mP = tourMP[t]; // Mid-Pool
+        bool sb = tourSB[t];
+
+        try
+        {{
+            Log("AutoShow BD [" + tourNm[t] + "]: Start (~5 Min)");
+
+            // ============ PHASE 1: START ============
+            SHTitle("HUPE!");
+            SHHold(0x2C, 8, 1000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(1000, gen)) return;
+
+            SHTitle("Start!");
+            SHHold(0x15, 8, 400, gen); // Platte AN
+            if (showGen != gen) return;
+            if (!SHWait(800, gen)) return;
+            SHHold(0x23, 8, 400, gen); // Kreuz AN
+            if (showGen != gen) return;
+            if (!SHWait(500, gen)) return;
+            SHTap(0x4F, 8, 0); // Preset 1
+
+            // ============ PHASE 2: HOCHFAHREN P+6 K+6 = ~50% ============
+            SHTitle("Hochfahren");
+            if (!SHWait(3000, gen)) return;
+            for (int i = 0; i < 6; i++)
+            {{
+                SHTap(0x13, 8, 0); Thread.Sleep(500); SHTap(0x14, 8, 0);
+                if (!SHWait(2500, gen)) return;
+            }}
+            SHTap(0x50, 8, 0); // Preset 2
+            if (!SHWait(3000, gen)) return;
+
+            // Warm-up Flamme
+            SHTitle("FLAMME!");
+            SHHold(0x2E, 8, 1500, gen);
+            if (showGen != gen) return;
+            if (!SHWait(5000, gen)) return;
+
+            // ============ PHASE 3: SCHNELLER P+5 K+5 = ~73% ============
+            SHTitle("Schneller!");
+            for (int i = 0; i < 5; i++)
+            {{
+                SHTap(0x13, 8, 0); Thread.Sleep(500); SHTap(0x14, 8, 0);
+                if (!SHWait(2500, gen)) return;
+            }}
+            SHTap(0x51, 8, 0); // Preset 3
+            if (!SHWait(3000, gen)) return;
+
+            // Gondelbremse bei ~73%
+            SHTitle("Bremse!");
+            SHHold(0x31, 8, 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            // Mid-Speed Effekt (aus Pool!)
+            PlayFX(PickFX(mP, rng), 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 4: VOLLGAS P+4 K+4 = 100%! ============
+            SHTitle("VOLLGAS!");
+            for (int i = 0; i < 4; i++)
+            {{
+                SHTap(0x13, 8, 0); Thread.Sleep(500); SHTap(0x14, 8, 0);
+                if (!SHWait(2000, gen)) return;
+            }}
+            SHTap(0x4B, 8, 0); // Preset 4
+            if (!SHWait(3000, gen)) return;
+
+            // Vollgas Effekt! (aus Pool!)
+            PlayFX(PickFX(vP, rng), 4000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            // Seifenblasen AN (tour-abhaengig)
+            if (sb) {{ SHTitle("Seifenblasen!"); SHTap(0x2E, 8, 0x1D); if (!SHWait(4000, gen)) return; }}
+
+            // Noch ein Vollgas Effekt!
+            PlayFX(PickFX(vP, rng), 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            if (sb) SHTap(0x2E, 8, 0x1D); // Seifenblasen AUS
+            SHTap(0x4C, 8, 0); // Preset 5
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 5: SCHRAEG 1 - Side A bremst ============
+            SHTitle(nmA + "\\\\nbremst!");
+            for (int i = 0; i < 6; i++) {{ SHTap(brkA, 8, 0); if (!SHWait(2000, gen)) return; }}
+
+            SHTitle("40%\\\\nGAP!");
+            if (!SHWait(4000, gen)) return;
+            SHTap(0x4D, 8, 0); // Preset 6
+
+            // Mid-Effekt waehrend Schraege
+            PlayFX(PickFX(mP, rng), 2000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            SHTitle("Bremse!");
+            SHHold(0x31, 8, 6000, gen); // Gondelbremse 6s
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            PlayFX(PickFX(mP, rng), 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 6: VOLLGAS - Side A zurueck ============
+            SHTitle("VOLLGAS!");
+            for (int i = 0; i < 6; i++) {{ SHTap(accA, 8, 0); if (!SHWait(1500, gen)) return; }}
+
+            SHTap(0x47, 8, 0); // Preset 7
+            if (!SHWait(2000, gen)) return;
+
+            // Vollgas Effekte!
+            PlayFX(PickFX(vP, rng), 5000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            SHTitle("NEBEL!");
+            SHHold(0x20, 8, 3000, gen);
+            if (showGen != gen) return;
+
+            SHTap(0x48, 8, 0); // Preset 8
+            if (!SHWait(3000, gen)) return;
+
+            PlayFX(PickFX(mP, rng), 2000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 7: SCHRAEG 2 - Side B bremst ============
+            SHTitle(nmB + "\\\\nbremst!");
+            for (int i = 0; i < 6; i++) {{ SHTap(brkB, 8, 0); if (!SHWait(2000, gen)) return; }}
+
+            SHTitle("40%\\\\nGAP!");
+            if (!SHWait(4000, gen)) return;
+            SHTap(0x49, 8, 0); // Preset 9
+
+            SHTitle("Bremse!");
+            SHHold(0x31, 8, 5000, gen); // Gondelbremse 5s
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            PlayFX(PickFX(mP, rng), 4000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            SHTitle("NEBEL!");
+            SHHold(0x20, 8, 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 8: MEGA PARTY - Side B zurueck ============
+            SHTitle("MEGA\\\\nPARTY!");
+            for (int i = 0; i < 6; i++) {{ SHTap(accB, 8, 0); if (!SHWait(1500, gen)) return; }}
+
+            SHTap(0x4F, 8, 0); // Preset 1 (Cycle!)
+            if (!SHWait(2000, gen)) return;
+
+            if (sb) {{ SHTitle("Seifenblasen!"); SHTap(0x2E, 8, 0x1D); if (!SHWait(3000, gen)) return; }}
+
+            // ALLES AN! (immer bei MEGA PARTY)
+            SHTitle("ALLES\\\\nAN!");
+            SHHoldMulti(new byte[]{{0x39, 0x20, 0x2E}}, 8, 4000, gen);
+            if (showGen != gen) return;
+
+            SHTap(0x50, 8, 0); // Preset 2
+            if (!SHWait(3000, gen)) return;
+
+            SHTitle("Bremse!");
+            SHHold(0x31, 8, 5000, gen); // Gondelbremse 5s
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            PlayFX(PickFX(vP, rng), 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            if (sb) {{ SHTap(0x2E, 8, 0x1D); if (!SHWait(2000, gen)) return; }} // Seifenblasen AUS
+
+            // Doppel-Flamme
+            SHTitle("FLAMME!");
+            SHHold(0x2E, 8, 1500, gen);
+            if (showGen != gen) return;
+            if (!SHWait(1500, gen)) return;
+            SHHold(0x2E, 8, 1500, gen);
+            if (showGen != gen) return;
+
+            // ============ PHASE 9: SCHRAEG 3 - Side A nochmal ============
+            SHTitle(nmA + "\\\\nbremst!");
+            for (int i = 0; i < 6; i++) {{ SHTap(brkA, 8, 0); if (!SHWait(1500, gen)) return; }}
+
+            SHTap(0x51, 8, 0); // Preset 3
+            SHTitle("40%\\\\nGAP!");
+            if (!SHWait(4000, gen)) return;
+
+            PlayFX(PickFX(mP, rng), 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            SHTitle("Bremse!");
+            SHHold(0x31, 8, 6000, gen); // Gondelbremse 6s
+            if (showGen != gen) return;
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 10: FINALE - Side A zurueck ============
+            SHTitle("FINALE!");
+            for (int i = 0; i < 6; i++) {{ SHTap(accA, 8, 0); if (!SHWait(1200, gen)) return; }}
+
+            SHTap(0x4B, 8, 0); // Preset 4
+            if (!SHWait(2000, gen)) return;
+
+            if (sb) {{ SHTitle("Seifenblasen!"); SHTap(0x2E, 8, 0x1D); if (!SHWait(2000, gen)) return; }}
+
+            // MEGA ALLES! (immer beim Finale)
+            SHTitle("MEGA\\\\nALLES!");
+            SHHoldMulti(new byte[]{{0x39, 0x20, 0x2E}}, 8, 5000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            // Noch ein Vollgas Effekt
+            PlayFX(PickFX(vP, rng), 3000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            // Nebel Finale
+            SHTitle("NEBEL!");
+            SHHold(0x20, 8, 4000, gen);
+            if (showGen != gen) return;
+
+            SHTap(0x4C, 8, 0); // Preset 5
+            if (!SHWait(2000, gen)) return;
+
+            if (sb) {{ SHTap(0x2E, 8, 0x1D); if (!SHWait(2000, gen)) return; }} // Seifenblasen AUS
+
+            // Gondelbremse letzte
+            SHTitle("Bremse!");
+            SHHold(0x31, 8, 6000, gen);
+            if (showGen != gen) return;
+            if (!SHWait(2000, gen)) return;
+
+            // ============ PHASE 11: RUNTERBREMSEN P-15 K-15 = 0% SCHNELL! ============
+            SHTitle("Bremsen!");
+            for (int i = 0; i < 8; i++)
+            {{
+                SHTap(0x22, 8, 0); Thread.Sleep(300); SHTap(0x21, 8, 0);
+                if (!SHWait(600, gen)) return;
+            }}
+            SHTap(0x4D, 8, 0); // Preset 6
+
+            SHTitle("Auslaufen");
+            for (int i = 0; i < 7; i++)
+            {{
+                SHTap(0x22, 8, 0); Thread.Sleep(300); SHTap(0x21, 8, 0);
+                if (!SHWait(600, gen)) return;
+            }}
+            if (!SHWait(3000, gen)) return;
+
+            // ============ PHASE 12: STOPP ============
+            SHTitle("Stopp");
+            SHHold(0x24, 8, 400, gen); // Kreuz AUS
+            if (showGen != gen) return;
+            if (!SHWait(500, gen)) return;
+            SHHold(0x16, 8, 400, gen); // Platte AUS
+            if (showGen != gen) return;
+            Thread.Sleep(500);
+            SHTap(0x4F, 8, 0); // Preset 1
+            if (!SHWait(3000, gen)) return;
+
+            SHTitle("Fertig!");
+            Log("AutoShow BD [" + tourNm[t] + "]: Beendet");
+            if (!SHWait(5000, gen)) return;
+            showRunning = false;
+            SHTitle("AUTO\\\\nSHOW");
+            SetImg(showCtx, false);
+        }}
+        catch (Exception ex)
+        {{
+            Log("AutoShow error: " + ex.Message);
+            showRunning = false;
+            SHTitle("FEHLER!");
+        }}
+    }}
+
     static void CU(string dir)
     {{
         try
@@ -909,6 +1368,8 @@ def generate_manifest():
             }
             if uuid == f"{PLUGIN_ID}.timer.startstop":
                 entry["PropertyInspectorPath"] = "timer_pi.html"
+            if uuid == f"{PLUGIN_ID}.breakdance.autoshow":
+                entry["PropertyInspectorPath"] = "show_pi.html"
             actions.append(entry)
 
     manifest = {
@@ -1029,6 +1490,55 @@ document.getElementById("m").onchange=sv;document.getElementById("s").onchange=s
     with open(os.path.join(SDPLUGIN_DIR, "timer_pi.html"), "w", encoding="utf-8") as f:
         f.write(timer_pi)
 
+    # AutoShow Tour Property Inspector HTML
+    show_pi = """<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<style>
+body{font-family:Arial,sans-serif;background:#2D2D2D;color:#969696;margin:0;padding:12px;font-size:13px}
+.row{display:flex;align-items:center;padding:8px 0}
+.lbl{flex:0 0 50px;text-align:right;padding-right:12px;font-weight:bold}
+select{width:180px;padding:6px 8px;background:#0D0D0D;border:1px solid #3a3a3a;border-radius:3px;color:#d8d8d8;font-size:13px}
+.desc{color:#aaa;font-size:11px;padding:8px 12px;margin-top:6px;background:#1a1a1a;border-radius:4px;line-height:1.5}
+.info{color:#555;font-size:10px;margin-top:10px;padding:0 12px}
+h3{color:#ccc;margin:12px 0 4px 0;font-size:12px;border-bottom:1px solid #3a3a3a;padding-bottom:4px}
+</style></head><body>
+<h3>BreakDance AutoShow</h3>
+<div class="row"><span class="lbl">Tour:</span>
+<select id="t">
+<option value="0">1 - Klassisch</option>
+<option value="1">2 - Pirouette</option>
+<option value="2">3 - Nebelwand</option>
+<option value="3">4 - Lichtgewitter</option>
+<option value="4">5 - Inferno</option>
+<option value="5">\U0001F3B2 Zufall</option>
+</select></div>
+<div id="desc" class="desc"></div>
+<div class="info">Kurz druecken = Show starten / Nochmal = Abbrechen<br>Effekte werden bei jedem Start zufaellig aus dem Tour-Pool gewaehlt!</div>
+<script>
+var descs=[
+"Klassischer ausgewogener Mix.\\nAsymmetrie: Kreuz\\u2192Platte\\u2192Kreuz\\nEffekte: Strobo+Nebel, Flamme+Nebel, LED+Flamme Kombos\\nSeifenblasen: Ja",
+"Umgekehrte Drehrichtung!\\nAsymmetrie: Platte\\u2192Kreuz\\u2192Platte\\nEffekte: Strobo+Nebel, Flamme+Nebel, LED+Flamme Kombos\\nSeifenblasen: Ja",
+"Nebel-Offensive!\\nAsymmetrie: Kreuz\\u2192Platte\\u2192Kreuz\\nEffekte: Extra viel Nebel, Nebel+Flamme, Nebel+Strobo, ALLES\\nSeifenblasen: Ja",
+"Strobo + LED Gewitter!\\nAsymmetrie: Platte\\u2192Kreuz\\u2192Platte\\nEffekte: Strobo, LED, Strobo+LED, Strobo+Flamme\\nSeifenblasen: Nein",
+"ALLES MAXIMUM!\\nAsymmetrie: Kreuz\\u2192Platte\\u2192Kreuz\\nEffekte: Strobo+Nebel+Flamme, alle Mega-Kombos\\nSeifenblasen: Ja",
+"\\u2728 Bei jedem Start wird zufaellig eine der 5 Touren gewaehlt!\\nJede Tour hat eigene Effekte und Asymmetrie.\\nFuer maximale Abwechslung!"];
+var ws,uid;
+function connectElgatoStreamDeckSocket(p,u,r,i,a){
+uid=u;var ai=JSON.parse(a);
+ws=new WebSocket("ws://localhost:"+p);
+ws.onopen=function(){ws.send(JSON.stringify({event:r,uuid:u}));
+var st=ai.payload&&ai.payload.settings;
+if(st&&st.tour){document.getElementById("t").value=st.tour}upd()};
+ws.onmessage=function(e){var msg=JSON.parse(e.data);
+if(msg.event==="didReceiveSettings"&&msg.payload&&msg.payload.settings&&msg.payload.settings.tour){
+document.getElementById("t").value=msg.payload.settings.tour;upd()}}}
+function upd(){var d=document.getElementById("desc");var v=parseInt(document.getElementById("t").value);d.innerHTML=descs[v].replace(/\\n/g,"<br>")}
+function sv(){var v=document.getElementById("t").value;ws.send(JSON.stringify({event:"setSettings",context:uid,payload:{tour:v}}));upd()}
+document.getElementById("t").onchange=sv;upd();
+</script></body></html>"""
+    with open(os.path.join(SDPLUGIN_DIR, "show_pi.html"), "w", encoding="utf-8") as f:
+        f.write(show_pi)
+
     # 4) Icons erstellen
     print("[4/5] Icons erstellen...")
     imgs_dir = os.path.join(SDPLUGIN_DIR, "imgs")
@@ -1131,6 +1641,7 @@ document.getElementById("m").onchange=sv;document.getElementById("s").onchange=s
         shutil.copy2(os.path.join(SDPLUGIN_DIR, "VERSION"), os.path.join(installed_dir, "VERSION"))
         # Timer Property Inspector kopieren
         shutil.copy2(os.path.join(SDPLUGIN_DIR, "timer_pi.html"), os.path.join(installed_dir, "timer_pi.html"))
+        shutil.copy2(os.path.join(SDPLUGIN_DIR, "show_pi.html"), os.path.join(installed_dir, "show_pi.html"))
         print(f"      plugin.exe + manifest + imgs + VERSION + PI kopiert nach {installed_dir}")
         # Stream Deck neustarten (Tasten wurden bereits am Anfang losgelassen)
         print("      Stream Deck wird neugestartet...")
