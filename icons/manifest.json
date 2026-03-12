@@ -1,0 +1,3102 @@
+[
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "idle",
+    "file": "breakdance_emergencystop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_emergencystop_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "hold",
+    "file": "breakdance_emergencystop_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_emergencystop_hold.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "breakdance_onoff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_onoff_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "breakdance_onoff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_onoff_pressed.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kompressor",
+    "label": "Kompressor",
+    "kind": "toggle",
+    "state": "off",
+    "file": "breakdance_kompressor_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kompressor_off.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kompressor",
+    "label": "Kompressor",
+    "kind": "toggle",
+    "state": "on",
+    "file": "breakdance_kompressor_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kompressor_on.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "plattespeeddown",
+    "label": "Platte -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "breakdance_plattespeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeeddown_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "plattespeeddown",
+    "label": "Platte -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "breakdance_plattespeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "plattespeedup",
+    "label": "Platte +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "breakdance_plattespeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeedup_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "plattespeedup",
+    "label": "Platte +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "breakdance_plattespeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeedup_repeat.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "platte",
+    "label": "Platte",
+    "kind": "toggle",
+    "state": "off",
+    "file": "breakdance_platte_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_platte_off.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "platte",
+    "label": "Platte",
+    "kind": "toggle",
+    "state": "on",
+    "file": "breakdance_platte_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_platte_on.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "plattetippen",
+    "label": "Platte Tip",
+    "kind": "press",
+    "state": "idle",
+    "file": "breakdance_plattetippen_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattetippen_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "plattetippen",
+    "label": "Platte Tip",
+    "kind": "press",
+    "state": "pressed",
+    "file": "breakdance_plattetippen_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattetippen_pressed.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuzspeeddown",
+    "label": "Kreuz -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "breakdance_kreuzspeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeeddown_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuzspeeddown",
+    "label": "Kreuz -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "breakdance_kreuzspeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuzspeedup",
+    "label": "Kreuz +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "breakdance_kreuzspeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeedup_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuzspeedup",
+    "label": "Kreuz +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "breakdance_kreuzspeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeedup_repeat.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuz",
+    "label": "Kreuz",
+    "kind": "toggle",
+    "state": "off",
+    "file": "breakdance_kreuz_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuz_off.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuz",
+    "label": "Kreuz",
+    "kind": "toggle",
+    "state": "on",
+    "file": "breakdance_kreuz_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuz_on.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuztippen",
+    "label": "Kreuz Tip",
+    "kind": "press",
+    "state": "idle",
+    "file": "breakdance_kreuztippen_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuztippen_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "kreuztippen",
+    "label": "Kreuz Tip",
+    "kind": "press",
+    "state": "pressed",
+    "file": "breakdance_kreuztippen_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuztippen_pressed.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "gondelbremse",
+    "label": "Gondelbremse",
+    "kind": "hold",
+    "state": "idle",
+    "file": "breakdance_gondelbremse_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_gondelbremse_idle.png"
+  },
+  {
+    "ride_slug": "breakdance",
+    "ride_name": "BreakDance",
+    "button_slug": "gondelbremse",
+    "label": "Gondelbremse",
+    "kind": "hold",
+    "state": "hold",
+    "file": "breakdance_gondelbremse_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_gondelbremse_hold.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "idle",
+    "file": "starlight_emergencystop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_emergencystop_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "hold",
+    "file": "starlight_emergencystop_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_emergencystop_hold.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "starlight_onoff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_onoff_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "starlight_onoff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_onoff_pressed.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "idle",
+    "file": "starlight_reset_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_reset_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "pressed",
+    "file": "starlight_reset_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_reset_pressed.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "parking",
+    "label": "Parking",
+    "kind": "press",
+    "state": "idle",
+    "file": "starlight_parking_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_parking_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "parking",
+    "label": "Parking",
+    "kind": "press",
+    "state": "pressed",
+    "file": "starlight_parking_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_parking_pressed.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondelpumpe",
+    "label": "Gondel Pumpe",
+    "kind": "toggle",
+    "state": "off",
+    "file": "starlight_gondelpumpe_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondelpumpe_off.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondelpumpe",
+    "label": "Gondel Pumpe",
+    "kind": "toggle",
+    "state": "on",
+    "file": "starlight_gondelpumpe_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondelpumpe_on.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armpumpe",
+    "label": "Arm Pumpe",
+    "kind": "toggle",
+    "state": "off",
+    "file": "starlight_armpumpe_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armpumpe_off.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armpumpe",
+    "label": "Arm Pumpe",
+    "kind": "toggle",
+    "state": "on",
+    "file": "starlight_armpumpe_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armpumpe_on.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondolaspeeddown",
+    "label": "Gondola -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "starlight_gondolaspeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeeddown_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondolaspeeddown",
+    "label": "Gondola -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "starlight_gondolaspeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondolaspeedup",
+    "label": "Gondola +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "starlight_gondolaspeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeedup_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondolaspeedup",
+    "label": "Gondola +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "starlight_gondolaspeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeedup_repeat.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondolabremse",
+    "label": "Gondola Bremse",
+    "kind": "hold",
+    "state": "idle",
+    "file": "starlight_gondolabremse_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolabremse_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondolabremse",
+    "label": "Gondola Bremse",
+    "kind": "hold",
+    "state": "hold",
+    "file": "starlight_gondolabremse_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolabremse_hold.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondel0",
+    "label": "Gondel 0",
+    "kind": "press",
+    "state": "idle",
+    "file": "starlight_gondel0_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondel0_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "gondel0",
+    "label": "Gondel 0",
+    "kind": "press",
+    "state": "pressed",
+    "file": "starlight_gondel0_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondel0_pressed.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armspeeddown",
+    "label": "Arm -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "starlight_armspeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeeddown_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armspeeddown",
+    "label": "Arm -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "starlight_armspeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armspeedup",
+    "label": "Arm +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "starlight_armspeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeedup_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armspeedup",
+    "label": "Arm +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "starlight_armspeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeedup_repeat.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armbremse",
+    "label": "Arm Bremse",
+    "kind": "press",
+    "state": "idle",
+    "file": "starlight_armbremse_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armbremse_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "armbremse",
+    "label": "Arm Bremse",
+    "kind": "press",
+    "state": "pressed",
+    "file": "starlight_armbremse_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armbremse_pressed.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "arm0",
+    "label": "Arm 0",
+    "kind": "press",
+    "state": "idle",
+    "file": "starlight_arm0_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_arm0_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "arm0",
+    "label": "Arm 0",
+    "kind": "press",
+    "state": "pressed",
+    "file": "starlight_arm0_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_arm0_pressed.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "platformup",
+    "label": "Platform Hoch",
+    "kind": "hold",
+    "state": "idle",
+    "file": "starlight_platformup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformup_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "platformup",
+    "label": "Platform Hoch",
+    "kind": "hold",
+    "state": "hold",
+    "file": "starlight_platformup_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformup_hold.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "platformdown",
+    "label": "Platform Runter",
+    "kind": "hold",
+    "state": "idle",
+    "file": "starlight_platformdown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformdown_idle.png"
+  },
+  {
+    "ride_slug": "starlight",
+    "ride_name": "StarLight",
+    "button_slug": "platformdown",
+    "label": "Platform Runter",
+    "kind": "hold",
+    "state": "hold",
+    "file": "starlight_platformdown_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformdown_hold.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "idle",
+    "file": "xplosion_emergencystop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_emergencystop_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "hold",
+    "file": "xplosion_emergencystop_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_emergencystop_hold.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "xplosion_onoff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_onoff_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "xplosion_onoff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_onoff_pressed.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "idle",
+    "file": "xplosion_reset_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_reset_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "pressed",
+    "file": "xplosion_reset_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_reset_pressed.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "freigabe",
+    "label": "Freigabe",
+    "kind": "press",
+    "state": "idle",
+    "file": "xplosion_freigabe_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_freigabe_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "freigabe",
+    "label": "Freigabe",
+    "kind": "press",
+    "state": "pressed",
+    "file": "xplosion_freigabe_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_freigabe_pressed.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "up",
+    "label": "Hoch",
+    "kind": "hold",
+    "state": "idle",
+    "file": "xplosion_up_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_up_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "up",
+    "label": "Hoch",
+    "kind": "hold",
+    "state": "hold",
+    "file": "xplosion_up_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_up_hold.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "down",
+    "label": "Runter",
+    "kind": "hold",
+    "state": "idle",
+    "file": "xplosion_down_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_down_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "down",
+    "label": "Runter",
+    "kind": "hold",
+    "state": "hold",
+    "file": "xplosion_down_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_down_hold.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "zero",
+    "label": "Null",
+    "kind": "press",
+    "state": "idle",
+    "file": "xplosion_zero_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_zero_idle.png"
+  },
+  {
+    "ride_slug": "xplosion",
+    "ride_name": "XPlosion",
+    "button_slug": "zero",
+    "label": "Null",
+    "kind": "press",
+    "state": "pressed",
+    "file": "xplosion_zero_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_zero_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "idle",
+    "file": "funhouse_emergencystop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_emergencystop_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "hold",
+    "file": "funhouse_emergencystop_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_emergencystop_hold.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_onoff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_onoff_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_onoff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_onoff_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "turntable1",
+    "label": "Drehscheibe 1.OG",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_turntable1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable1_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "turntable1",
+    "label": "Drehscheibe 1.OG",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_turntable1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable1_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "turntable2",
+    "label": "Drehscheibe 2.OG",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_turntable2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable2_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "turntable2",
+    "label": "Drehscheibe 2.OG",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_turntable2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable2_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "turntable3",
+    "label": "Drehscheibe Dach",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_turntable3_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable3_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "turntable3",
+    "label": "Drehscheibe Dach",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_turntable3_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable3_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "conveyor1",
+    "label": "Laufband 1.OG",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_conveyor1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor1_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "conveyor1",
+    "label": "Laufband 1.OG",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_conveyor1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor1_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "conveyor2",
+    "label": "Laufband 2.OG",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_conveyor2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor2_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "conveyor2",
+    "label": "Laufband 2.OG",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_conveyor2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor2_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "vibrate1",
+    "label": "Vibrierplatte",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_vibrate1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_vibrate1_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "vibrate1",
+    "label": "Vibrierplatte",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_vibrate1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_vibrate1_pressed.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "tunnel1",
+    "label": "Drehtunnel",
+    "kind": "press",
+    "state": "idle",
+    "file": "funhouse_tunnel1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_tunnel1_idle.png"
+  },
+  {
+    "ride_slug": "funhouse",
+    "ride_name": "FunHouse",
+    "button_slug": "tunnel1",
+    "label": "Drehtunnel",
+    "kind": "press",
+    "state": "pressed",
+    "file": "funhouse_tunnel1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_tunnel1_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "idle",
+    "file": "rotator_emergencystop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_emergencystop_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "hold",
+    "file": "rotator_emergencystop_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_emergencystop_hold.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_onoff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_onoff_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_onoff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_onoff_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_reset_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_reset_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_reset_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_reset_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "park",
+    "label": "Park",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_park_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_park_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "park",
+    "label": "Park",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_park_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_park_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "pumpe",
+    "label": "Pumpe",
+    "kind": "toggle",
+    "state": "off",
+    "file": "rotator_pumpe_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_pumpe_off.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "pumpe",
+    "label": "Pumpe",
+    "kind": "toggle",
+    "state": "on",
+    "file": "rotator_pumpe_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_pumpe_on.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kompressor",
+    "label": "Kompressor",
+    "kind": "toggle",
+    "state": "off",
+    "file": "rotator_kompressor_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kompressor_off.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kompressor",
+    "label": "Kompressor",
+    "kind": "toggle",
+    "state": "on",
+    "file": "rotator_kompressor_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kompressor_on.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "plattespeeddown",
+    "label": "Platte -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "rotator_plattespeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeeddown_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "plattespeeddown",
+    "label": "Platte -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "rotator_plattespeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "plattespeedup",
+    "label": "Platte +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "rotator_plattespeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeedup_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "plattespeedup",
+    "label": "Platte +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "rotator_plattespeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeedup_repeat.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "platte0",
+    "label": "Platte 0",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_platte0_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte0_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "platte0",
+    "label": "Platte 0",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_platte0_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte0_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "platte",
+    "label": "Platte",
+    "kind": "toggle",
+    "state": "off",
+    "file": "rotator_platte_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte_off.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "platte",
+    "label": "Platte",
+    "kind": "toggle",
+    "state": "on",
+    "file": "rotator_platte_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte_on.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuzspeeddown",
+    "label": "Kreuz -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "rotator_kreuzspeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeeddown_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuzspeeddown",
+    "label": "Kreuz -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "rotator_kreuzspeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuzspeedup",
+    "label": "Kreuz +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "rotator_kreuzspeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeedup_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuzspeedup",
+    "label": "Kreuz +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "rotator_kreuzspeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeedup_repeat.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuz0",
+    "label": "Kreuz 0",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_kreuz0_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz0_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuz0",
+    "label": "Kreuz 0",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_kreuz0_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz0_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuz",
+    "label": "Kreuz",
+    "kind": "toggle",
+    "state": "off",
+    "file": "rotator_kreuz_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz_off.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "kreuz",
+    "label": "Kreuz",
+    "kind": "toggle",
+    "state": "on",
+    "file": "rotator_kreuz_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz_on.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverterspeeddown",
+    "label": "Inverter -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "rotator_inverterspeeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeeddown_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverterspeeddown",
+    "label": "Inverter -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "rotator_inverterspeeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeeddown_repeat.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverterspeedup",
+    "label": "Inverter +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "rotator_inverterspeedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeedup_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverterspeedup",
+    "label": "Inverter +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "rotator_inverterspeedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeedup_repeat.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverter0",
+    "label": "Inverter 0",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_inverter0_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter0_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverter0",
+    "label": "Inverter 0",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_inverter0_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter0_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverter",
+    "label": "Inverter",
+    "kind": "toggle",
+    "state": "off",
+    "file": "rotator_inverter_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter_off.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "inverter",
+    "label": "Inverter",
+    "kind": "toggle",
+    "state": "on",
+    "file": "rotator_inverter_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter_on.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "buegel",
+    "label": "Buegel",
+    "kind": "toggle",
+    "state": "off",
+    "file": "rotator_buegel_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_buegel_off.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "buegel",
+    "label": "Buegel",
+    "kind": "toggle",
+    "state": "on",
+    "file": "rotator_buegel_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_buegel_on.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "hubup",
+    "label": "Hub Hoch",
+    "kind": "hold",
+    "state": "idle",
+    "file": "rotator_hubup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubup_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "hubup",
+    "label": "Hub Hoch",
+    "kind": "hold",
+    "state": "hold",
+    "file": "rotator_hubup_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubup_hold.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "hubstop",
+    "label": "Hub Stop",
+    "kind": "press",
+    "state": "idle",
+    "file": "rotator_hubstop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubstop_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "hubstop",
+    "label": "Hub Stop",
+    "kind": "press",
+    "state": "pressed",
+    "file": "rotator_hubstop_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubstop_pressed.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "hubdown",
+    "label": "Hub Runter",
+    "kind": "hold",
+    "state": "idle",
+    "file": "rotator_hubdown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubdown_idle.png"
+  },
+  {
+    "ride_slug": "rotator",
+    "ride_name": "Rotator",
+    "button_slug": "hubdown",
+    "label": "Hub Runter",
+    "kind": "hold",
+    "state": "hold",
+    "file": "rotator_hubdown_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubdown_hold.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "idle",
+    "file": "turaka_emergencystop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_emergencystop_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "emergencystop",
+    "label": "NOT-AUS",
+    "kind": "hold",
+    "state": "hold",
+    "file": "turaka_emergencystop_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_emergencystop_hold.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_onoff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_onoff_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "onoff",
+    "label": "EIN/AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_onoff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_onoff_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_reset_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_reset_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "reset",
+    "label": "Reset",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_reset_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_reset_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "speeddown",
+    "label": "Speed -",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "turaka_speeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speeddown_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "speeddown",
+    "label": "Speed -",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "turaka_speeddown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speeddown_repeat.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "speedup",
+    "label": "Speed +",
+    "kind": "repeat",
+    "state": "idle",
+    "file": "turaka_speedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speedup_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "speedup",
+    "label": "Speed +",
+    "kind": "repeat",
+    "state": "repeat",
+    "file": "turaka_speedup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speedup_repeat.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "direction",
+    "label": "Richtung",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_direction_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_direction_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "direction",
+    "label": "Richtung",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_direction_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_direction_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "start",
+    "label": "Start",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_start_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_start_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "start",
+    "label": "Start",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_start_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_start_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "stop",
+    "label": "Stop",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_stop_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_stop_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "stop",
+    "label": "Stop",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_stop_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_stop_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "platform",
+    "label": "Platform",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_platform_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_platform_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "platform",
+    "label": "Platform",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_platform_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_platform_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "parkcar1",
+    "label": "Park Wagen 1",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_parkcar1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar1_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "parkcar1",
+    "label": "Park Wagen 1",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_parkcar1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar1_pressed.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "parkcar2",
+    "label": "Park Wagen 2",
+    "kind": "press",
+    "state": "idle",
+    "file": "turaka_parkcar2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar2_idle.png"
+  },
+  {
+    "ride_slug": "turaka",
+    "ride_name": "Turaka",
+    "button_slug": "parkcar2",
+    "label": "Park Wagen 2",
+    "kind": "press",
+    "state": "pressed",
+    "file": "turaka_parkcar2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar2_pressed.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "enterleave",
+    "label": "Ein-/Aussteigen",
+    "kind": "press",
+    "state": "idle",
+    "file": "standard_enterleave_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_enterleave_idle.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "enterleave",
+    "label": "Ein-/Aussteigen",
+    "kind": "press",
+    "state": "pressed",
+    "file": "standard_enterleave_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_enterleave_pressed.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "pushtotalk",
+    "label": "Push to Talk",
+    "kind": "hold",
+    "state": "idle",
+    "file": "standard_pushtotalk_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_pushtotalk_idle.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "pushtotalk",
+    "label": "Push to Talk",
+    "kind": "hold",
+    "state": "hold",
+    "file": "standard_pushtotalk_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_pushtotalk_hold.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "nextseat",
+    "label": "Naechster Platz",
+    "kind": "mod",
+    "state": "idle",
+    "file": "standard_nextseat_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_nextseat_idle.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "nextseat",
+    "label": "Naechster Platz",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "standard_nextseat_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_nextseat_pressed.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "lastseat",
+    "label": "Letzter Platz",
+    "kind": "mod",
+    "state": "idle",
+    "file": "standard_lastseat_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_lastseat_idle.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "lastseat",
+    "label": "Letzter Platz",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "standard_lastseat_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_lastseat_pressed.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "camera",
+    "label": "Kamerawechsel",
+    "kind": "press",
+    "state": "idle",
+    "file": "standard_camera_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_camera_idle.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "camera",
+    "label": "Kamerawechsel",
+    "kind": "press",
+    "state": "pressed",
+    "file": "standard_camera_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_camera_pressed.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "chat",
+    "label": "Chat",
+    "kind": "press",
+    "state": "idle",
+    "file": "standard_chat_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_chat_idle.png"
+  },
+  {
+    "ride_slug": "standard",
+    "ride_name": "Standard",
+    "button_slug": "chat",
+    "label": "Chat",
+    "kind": "press",
+    "state": "pressed",
+    "file": "standard_chat_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_chat_pressed.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "menu",
+    "label": "Menue",
+    "kind": "press",
+    "state": "idle",
+    "file": "settings_menu_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_menu_idle.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "menu",
+    "label": "Menue",
+    "kind": "press",
+    "state": "pressed",
+    "file": "settings_menu_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_menu_pressed.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "speedup",
+    "label": "Speed Hoch",
+    "kind": "press",
+    "state": "idle",
+    "file": "settings_speedup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speedup_idle.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "speedup",
+    "label": "Speed Hoch",
+    "kind": "press",
+    "state": "pressed",
+    "file": "settings_speedup_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speedup_pressed.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "speeddown",
+    "label": "Speed Runter",
+    "kind": "press",
+    "state": "idle",
+    "file": "settings_speeddown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speeddown_idle.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "speeddown",
+    "label": "Speed Runter",
+    "kind": "press",
+    "state": "pressed",
+    "file": "settings_speeddown_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speeddown_pressed.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "repeatspeed",
+    "label": "Repeat Speed",
+    "kind": "system",
+    "state": "idle",
+    "file": "settings_repeatspeed_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_repeatspeed_idle.png"
+  },
+  {
+    "ride_slug": "settings",
+    "ride_name": "Settings",
+    "button_slug": "repeatspeed",
+    "label": "Repeat Speed",
+    "kind": "system",
+    "state": "cycle",
+    "file": "settings_repeatspeed_cycle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_repeatspeed_cycle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset1",
+    "label": "Preset 1",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset1_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset1",
+    "label": "Preset 1",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset1_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset2",
+    "label": "Preset 2",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset2_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset2",
+    "label": "Preset 2",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset2_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset3",
+    "label": "Preset 3",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset3_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset3_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset3",
+    "label": "Preset 3",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset3_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset3_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset4",
+    "label": "Preset 4",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset4_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset4_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset4",
+    "label": "Preset 4",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset4_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset4_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset5",
+    "label": "Preset 5",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset5_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset5_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset5",
+    "label": "Preset 5",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset5_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset5_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset6",
+    "label": "Preset 6",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset6_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset6_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset6",
+    "label": "Preset 6",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset6_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset6_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset7",
+    "label": "Preset 7",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset7_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset7_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset7",
+    "label": "Preset 7",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset7_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset7_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset8",
+    "label": "Preset 8",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset8_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset8_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset8",
+    "label": "Preset 8",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset8_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset8_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset9",
+    "label": "Preset 9",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_preset9_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset9_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "preset9",
+    "label": "Preset 9",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_preset9_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset9_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light1",
+    "label": "Light 1",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light1_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light1",
+    "label": "Light 1",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light1_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light2",
+    "label": "Light 2",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light2_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light2",
+    "label": "Light 2",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light2_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light3",
+    "label": "Light 3",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light3_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light3_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light3",
+    "label": "Light 3",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light3_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light3_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light4",
+    "label": "Light 4",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light4_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light4_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light4",
+    "label": "Light 4",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light4_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light4_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light5",
+    "label": "Light 5",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light5_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light5_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light5",
+    "label": "Light 5",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light5_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light5_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light6",
+    "label": "Light 6",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light6_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light6_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light6",
+    "label": "Light 6",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light6_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light6_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light7",
+    "label": "Light 7",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light7_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light7_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light7",
+    "label": "Light 7",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light7_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light7_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light8",
+    "label": "Light 8",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light8_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light8_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light8",
+    "label": "Light 8",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light8_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light8_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light9",
+    "label": "Light 9",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_light9_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light9_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "light9",
+    "label": "Light 9",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_light9_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light9_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "alloff",
+    "label": "Alle AUS",
+    "kind": "press",
+    "state": "idle",
+    "file": "lighteffect_alloff_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_alloff_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "alloff",
+    "label": "Alle AUS",
+    "kind": "press",
+    "state": "pressed",
+    "file": "lighteffect_alloff_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_alloff_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "strobo",
+    "label": "Strobo",
+    "kind": "hold",
+    "state": "idle",
+    "file": "lighteffect_strobo_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_strobo_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "strobo",
+    "label": "Strobo",
+    "kind": "hold",
+    "state": "hold",
+    "file": "lighteffect_strobo_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_strobo_hold.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "ledstrobe",
+    "label": "LED Strobe",
+    "kind": "hold",
+    "state": "idle",
+    "file": "lighteffect_ledstrobe_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_ledstrobe_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "ledstrobe",
+    "label": "LED Strobe",
+    "kind": "hold",
+    "state": "hold",
+    "file": "lighteffect_ledstrobe_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_ledstrobe_hold.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "colorstrobe",
+    "label": "Farbstroboskop",
+    "kind": "mod",
+    "state": "idle",
+    "file": "lighteffect_colorstrobe_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_colorstrobe_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "colorstrobe",
+    "label": "Farbstroboskop",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "lighteffect_colorstrobe_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_colorstrobe_pressed.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "spotonoff",
+    "label": "Spot AN/AUS",
+    "kind": "modtoggle",
+    "state": "off",
+    "file": "lighteffect_spotonoff_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotonoff_off.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "spotonoff",
+    "label": "Spot AN/AUS",
+    "kind": "modtoggle",
+    "state": "on",
+    "file": "lighteffect_spotonoff_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotonoff_on.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "spotcolorup",
+    "label": "SpotColor +",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "lighteffect_spotcolorup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolorup_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "spotcolorup",
+    "label": "SpotColor +",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "lighteffect_spotcolorup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolorup_repeat.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "spotcolordown",
+    "label": "SpotColor -",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "lighteffect_spotcolordown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolordown_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "spotcolordown",
+    "label": "SpotColor -",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "lighteffect_spotcolordown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolordown_repeat.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "fog",
+    "label": "Nebel",
+    "kind": "hold",
+    "state": "idle",
+    "file": "lighteffect_fog_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_fog_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "fog",
+    "label": "Nebel",
+    "kind": "hold",
+    "state": "hold",
+    "file": "lighteffect_fog_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_fog_hold.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "flame",
+    "label": "Flamme",
+    "kind": "hold",
+    "state": "idle",
+    "file": "lighteffect_flame_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_flame_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "flame",
+    "label": "Flamme",
+    "kind": "hold",
+    "state": "hold",
+    "file": "lighteffect_flame_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_flame_hold.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "bubbles",
+    "label": "Seifenblasen",
+    "kind": "modhold",
+    "state": "idle",
+    "file": "lighteffect_bubbles_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_bubbles_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "bubbles",
+    "label": "Seifenblasen",
+    "kind": "modhold",
+    "state": "hold",
+    "file": "lighteffect_bubbles_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_bubbles_hold.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "horn",
+    "label": "Hupe",
+    "kind": "hold",
+    "state": "idle",
+    "file": "lighteffect_horn_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_horn_idle.png"
+  },
+  {
+    "ride_slug": "lighteffect",
+    "ride_name": "LightEffect",
+    "button_slug": "horn",
+    "label": "Hupe",
+    "kind": "hold",
+    "state": "hold",
+    "file": "lighteffect_horn_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_horn_hold.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "onoff",
+    "label": "Moving Head",
+    "kind": "modtoggle",
+    "state": "off",
+    "file": "movingheads_onoff_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_onoff_off.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "onoff",
+    "label": "Moving Head",
+    "kind": "modtoggle",
+    "state": "on",
+    "file": "movingheads_onoff_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_onoff_on.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "light",
+    "label": "MH Licht",
+    "kind": "mod",
+    "state": "idle",
+    "file": "movingheads_light_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_light_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "light",
+    "label": "MH Licht",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "movingheads_light_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_light_pressed.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "lightsync",
+    "label": "MH Light Sync",
+    "kind": "mod",
+    "state": "idle",
+    "file": "movingheads_lightsync_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_lightsync_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "lightsync",
+    "label": "MH Light Sync",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "movingheads_lightsync_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_lightsync_pressed.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "colorstrobe",
+    "label": "MH Color Strobe",
+    "kind": "mod",
+    "state": "idle",
+    "file": "movingheads_colorstrobe_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorstrobe_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "colorstrobe",
+    "label": "MH Color Strobe",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "movingheads_colorstrobe_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorstrobe_pressed.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "colorup",
+    "label": "Color +",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "movingheads_colorup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorup_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "colorup",
+    "label": "Color +",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "movingheads_colorup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorup_repeat.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "colordown",
+    "label": "Color -",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "movingheads_colordown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colordown_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "colordown",
+    "label": "Color -",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "movingheads_colordown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colordown_repeat.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "programup",
+    "label": "Programm +",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "movingheads_programup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programup_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "programup",
+    "label": "Programm +",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "movingheads_programup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programup_repeat.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "programdown",
+    "label": "Programm -",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "movingheads_programdown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programdown_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "programdown",
+    "label": "Programm -",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "movingheads_programdown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programdown_repeat.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "gobosup",
+    "label": "Gobos +",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "movingheads_gobosup_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosup_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "gobosup",
+    "label": "Gobos +",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "movingheads_gobosup_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosup_repeat.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "gobosdown",
+    "label": "Gobos -",
+    "kind": "modrepeat",
+    "state": "idle",
+    "file": "movingheads_gobosdown_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosdown_idle.png"
+  },
+  {
+    "ride_slug": "movingheads",
+    "ride_name": "MovingHeads",
+    "button_slug": "gobosdown",
+    "label": "Gobos -",
+    "kind": "modrepeat",
+    "state": "repeat",
+    "file": "movingheads_gobosdown_repeat.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosdown_repeat.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "playpause",
+    "label": "Play/Pause",
+    "kind": "press",
+    "state": "idle",
+    "file": "sound_playpause_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_playpause_idle.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "playpause",
+    "label": "Play/Pause",
+    "kind": "press",
+    "state": "pressed",
+    "file": "sound_playpause_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_playpause_pressed.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "next",
+    "label": "Naechster Track",
+    "kind": "press",
+    "state": "idle",
+    "file": "sound_next_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_next_idle.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "next",
+    "label": "Naechster Track",
+    "kind": "press",
+    "state": "pressed",
+    "file": "sound_next_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_next_pressed.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "prev",
+    "label": "Vorheriger Track",
+    "kind": "press",
+    "state": "idle",
+    "file": "sound_prev_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_prev_idle.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "prev",
+    "label": "Vorheriger Track",
+    "kind": "press",
+    "state": "pressed",
+    "file": "sound_prev_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_prev_pressed.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "micro",
+    "label": "Mikro",
+    "kind": "hold",
+    "state": "idle",
+    "file": "sound_micro_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_micro_idle.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "micro",
+    "label": "Mikro",
+    "kind": "hold",
+    "state": "hold",
+    "file": "sound_micro_hold.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_micro_hold.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "microecho",
+    "label": "Mikro Echo",
+    "kind": "holdtoggle",
+    "state": "off",
+    "file": "sound_microecho_off.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_microecho_off.png"
+  },
+  {
+    "ride_slug": "sound",
+    "ride_name": "Sound",
+    "button_slug": "microecho",
+    "label": "Mikro Echo",
+    "kind": "holdtoggle",
+    "state": "on",
+    "file": "sound_microecho_on.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_microecho_on.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle1",
+    "label": "Jingle 1",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle1_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle1",
+    "label": "Jingle 1",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle1_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle2",
+    "label": "Jingle 2",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle2_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle2",
+    "label": "Jingle 2",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle2_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle3",
+    "label": "Jingle 3",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle3_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle3_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle3",
+    "label": "Jingle 3",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle3_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle3_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle4",
+    "label": "Jingle 4",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle4_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle4_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle4",
+    "label": "Jingle 4",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle4_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle4_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle5",
+    "label": "Jingle 5",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle5_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle5_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle5",
+    "label": "Jingle 5",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle5_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle5_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle6",
+    "label": "Jingle 6",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle6_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle6_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle6",
+    "label": "Jingle 6",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle6_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle6_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle7",
+    "label": "Jingle 7",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle7_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle7_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle7",
+    "label": "Jingle 7",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle7_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle7_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle8",
+    "label": "Jingle 8",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle8_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle8_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle8",
+    "label": "Jingle 8",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle8_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle8_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle9",
+    "label": "Jingle 9",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle9_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle9_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle9",
+    "label": "Jingle 9",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle9_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle9_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle10",
+    "label": "Jingle 10",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle10_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle10_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle10",
+    "label": "Jingle 10",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle10_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle10_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle11",
+    "label": "Jingle 11",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle11_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle11_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle11",
+    "label": "Jingle 11",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle11_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle11_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle12",
+    "label": "Jingle 12",
+    "kind": "press",
+    "state": "idle",
+    "file": "jingles_jingle12_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle12_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "jingle12",
+    "label": "Jingle 12",
+    "kind": "press",
+    "state": "pressed",
+    "file": "jingles_jingle12_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle12_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck1",
+    "label": "Deck 1",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck1_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck1_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck1",
+    "label": "Deck 1",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck1_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck1_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck2",
+    "label": "Deck 2",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck2_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck2_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck2",
+    "label": "Deck 2",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck2_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck2_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck3",
+    "label": "Deck 3",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck3_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck3_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck3",
+    "label": "Deck 3",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck3_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck3_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck4",
+    "label": "Deck 4",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck4_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck4_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck4",
+    "label": "Deck 4",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck4_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck4_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck5",
+    "label": "Deck 5",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck5_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck5_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck5",
+    "label": "Deck 5",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck5_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck5_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck6",
+    "label": "Deck 6",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck6_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck6_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck6",
+    "label": "Deck 6",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck6_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck6_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck7",
+    "label": "Deck 7",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck7_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck7_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck7",
+    "label": "Deck 7",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck7_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck7_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck8",
+    "label": "Deck 8",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck8_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck8_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck8",
+    "label": "Deck 8",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck8_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck8_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck9",
+    "label": "Deck 9",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck9_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck9_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck9",
+    "label": "Deck 9",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck9_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck9_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck10",
+    "label": "Deck 10",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck10_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck10_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck10",
+    "label": "Deck 10",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck10_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck10_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck11",
+    "label": "Deck 11",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck11_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck11_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck11",
+    "label": "Deck 11",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck11_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck11_pressed.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck12",
+    "label": "Deck 12",
+    "kind": "mod",
+    "state": "idle",
+    "file": "jingles_deck12_idle.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck12_idle.png"
+  },
+  {
+    "ride_slug": "jingles",
+    "ride_name": "Jingles",
+    "button_slug": "deck12",
+    "label": "Deck 12",
+    "kind": "mod",
+    "state": "pressed",
+    "file": "jingles_deck12_pressed.png",
+    "path": "/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck12_pressed.png"
+  }
+]

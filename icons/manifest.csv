@@ -1,0 +1,311 @@
+ride_slug,ride_name,button_slug,label,kind,state,file,path
+breakdance,BreakDance,emergencystop,NOT-AUS,hold,idle,breakdance_emergencystop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_emergencystop_idle.png
+breakdance,BreakDance,emergencystop,NOT-AUS,hold,hold,breakdance_emergencystop_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_emergencystop_hold.png
+breakdance,BreakDance,onoff,EIN/AUS,press,idle,breakdance_onoff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_onoff_idle.png
+breakdance,BreakDance,onoff,EIN/AUS,press,pressed,breakdance_onoff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_onoff_pressed.png
+breakdance,BreakDance,kompressor,Kompressor,toggle,off,breakdance_kompressor_off.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kompressor_off.png
+breakdance,BreakDance,kompressor,Kompressor,toggle,on,breakdance_kompressor_on.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kompressor_on.png
+breakdance,BreakDance,plattespeeddown,Platte -,repeat,idle,breakdance_plattespeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeeddown_idle.png
+breakdance,BreakDance,plattespeeddown,Platte -,repeat,repeat,breakdance_plattespeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeeddown_repeat.png
+breakdance,BreakDance,plattespeedup,Platte +,repeat,idle,breakdance_plattespeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeedup_idle.png
+breakdance,BreakDance,plattespeedup,Platte +,repeat,repeat,breakdance_plattespeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattespeedup_repeat.png
+breakdance,BreakDance,platte,Platte,toggle,off,breakdance_platte_off.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_platte_off.png
+breakdance,BreakDance,platte,Platte,toggle,on,breakdance_platte_on.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_platte_on.png
+breakdance,BreakDance,plattetippen,Platte Tip,press,idle,breakdance_plattetippen_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattetippen_idle.png
+breakdance,BreakDance,plattetippen,Platte Tip,press,pressed,breakdance_plattetippen_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_plattetippen_pressed.png
+breakdance,BreakDance,kreuzspeeddown,Kreuz -,repeat,idle,breakdance_kreuzspeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeeddown_idle.png
+breakdance,BreakDance,kreuzspeeddown,Kreuz -,repeat,repeat,breakdance_kreuzspeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeeddown_repeat.png
+breakdance,BreakDance,kreuzspeedup,Kreuz +,repeat,idle,breakdance_kreuzspeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeedup_idle.png
+breakdance,BreakDance,kreuzspeedup,Kreuz +,repeat,repeat,breakdance_kreuzspeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuzspeedup_repeat.png
+breakdance,BreakDance,kreuz,Kreuz,toggle,off,breakdance_kreuz_off.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuz_off.png
+breakdance,BreakDance,kreuz,Kreuz,toggle,on,breakdance_kreuz_on.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuz_on.png
+breakdance,BreakDance,kreuztippen,Kreuz Tip,press,idle,breakdance_kreuztippen_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuztippen_idle.png
+breakdance,BreakDance,kreuztippen,Kreuz Tip,press,pressed,breakdance_kreuztippen_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_kreuztippen_pressed.png
+breakdance,BreakDance,gondelbremse,Gondelbremse,hold,idle,breakdance_gondelbremse_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_gondelbremse_idle.png
+breakdance,BreakDance,gondelbremse,Gondelbremse,hold,hold,breakdance_gondelbremse_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/breakdance/breakdance_gondelbremse_hold.png
+starlight,StarLight,emergencystop,NOT-AUS,hold,idle,starlight_emergencystop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_emergencystop_idle.png
+starlight,StarLight,emergencystop,NOT-AUS,hold,hold,starlight_emergencystop_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_emergencystop_hold.png
+starlight,StarLight,onoff,EIN/AUS,press,idle,starlight_onoff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_onoff_idle.png
+starlight,StarLight,onoff,EIN/AUS,press,pressed,starlight_onoff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_onoff_pressed.png
+starlight,StarLight,reset,Reset,press,idle,starlight_reset_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_reset_idle.png
+starlight,StarLight,reset,Reset,press,pressed,starlight_reset_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_reset_pressed.png
+starlight,StarLight,parking,Parking,press,idle,starlight_parking_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_parking_idle.png
+starlight,StarLight,parking,Parking,press,pressed,starlight_parking_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_parking_pressed.png
+starlight,StarLight,gondelpumpe,Gondel Pumpe,toggle,off,starlight_gondelpumpe_off.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondelpumpe_off.png
+starlight,StarLight,gondelpumpe,Gondel Pumpe,toggle,on,starlight_gondelpumpe_on.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondelpumpe_on.png
+starlight,StarLight,armpumpe,Arm Pumpe,toggle,off,starlight_armpumpe_off.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armpumpe_off.png
+starlight,StarLight,armpumpe,Arm Pumpe,toggle,on,starlight_armpumpe_on.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armpumpe_on.png
+starlight,StarLight,gondolaspeeddown,Gondola -,repeat,idle,starlight_gondolaspeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeeddown_idle.png
+starlight,StarLight,gondolaspeeddown,Gondola -,repeat,repeat,starlight_gondolaspeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeeddown_repeat.png
+starlight,StarLight,gondolaspeedup,Gondola +,repeat,idle,starlight_gondolaspeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeedup_idle.png
+starlight,StarLight,gondolaspeedup,Gondola +,repeat,repeat,starlight_gondolaspeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolaspeedup_repeat.png
+starlight,StarLight,gondolabremse,Gondola Bremse,hold,idle,starlight_gondolabremse_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolabremse_idle.png
+starlight,StarLight,gondolabremse,Gondola Bremse,hold,hold,starlight_gondolabremse_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondolabremse_hold.png
+starlight,StarLight,gondel0,Gondel 0,press,idle,starlight_gondel0_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondel0_idle.png
+starlight,StarLight,gondel0,Gondel 0,press,pressed,starlight_gondel0_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_gondel0_pressed.png
+starlight,StarLight,armspeeddown,Arm -,repeat,idle,starlight_armspeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeeddown_idle.png
+starlight,StarLight,armspeeddown,Arm -,repeat,repeat,starlight_armspeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeeddown_repeat.png
+starlight,StarLight,armspeedup,Arm +,repeat,idle,starlight_armspeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeedup_idle.png
+starlight,StarLight,armspeedup,Arm +,repeat,repeat,starlight_armspeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armspeedup_repeat.png
+starlight,StarLight,armbremse,Arm Bremse,press,idle,starlight_armbremse_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armbremse_idle.png
+starlight,StarLight,armbremse,Arm Bremse,press,pressed,starlight_armbremse_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_armbremse_pressed.png
+starlight,StarLight,arm0,Arm 0,press,idle,starlight_arm0_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_arm0_idle.png
+starlight,StarLight,arm0,Arm 0,press,pressed,starlight_arm0_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_arm0_pressed.png
+starlight,StarLight,platformup,Platform Hoch,hold,idle,starlight_platformup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformup_idle.png
+starlight,StarLight,platformup,Platform Hoch,hold,hold,starlight_platformup_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformup_hold.png
+starlight,StarLight,platformdown,Platform Runter,hold,idle,starlight_platformdown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformdown_idle.png
+starlight,StarLight,platformdown,Platform Runter,hold,hold,starlight_platformdown_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/starlight/starlight_platformdown_hold.png
+xplosion,XPlosion,emergencystop,NOT-AUS,hold,idle,xplosion_emergencystop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_emergencystop_idle.png
+xplosion,XPlosion,emergencystop,NOT-AUS,hold,hold,xplosion_emergencystop_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_emergencystop_hold.png
+xplosion,XPlosion,onoff,EIN/AUS,press,idle,xplosion_onoff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_onoff_idle.png
+xplosion,XPlosion,onoff,EIN/AUS,press,pressed,xplosion_onoff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_onoff_pressed.png
+xplosion,XPlosion,reset,Reset,press,idle,xplosion_reset_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_reset_idle.png
+xplosion,XPlosion,reset,Reset,press,pressed,xplosion_reset_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_reset_pressed.png
+xplosion,XPlosion,freigabe,Freigabe,press,idle,xplosion_freigabe_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_freigabe_idle.png
+xplosion,XPlosion,freigabe,Freigabe,press,pressed,xplosion_freigabe_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_freigabe_pressed.png
+xplosion,XPlosion,up,Hoch,hold,idle,xplosion_up_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_up_idle.png
+xplosion,XPlosion,up,Hoch,hold,hold,xplosion_up_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_up_hold.png
+xplosion,XPlosion,down,Runter,hold,idle,xplosion_down_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_down_idle.png
+xplosion,XPlosion,down,Runter,hold,hold,xplosion_down_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_down_hold.png
+xplosion,XPlosion,zero,Null,press,idle,xplosion_zero_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_zero_idle.png
+xplosion,XPlosion,zero,Null,press,pressed,xplosion_zero_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/xplosion/xplosion_zero_pressed.png
+funhouse,FunHouse,emergencystop,NOT-AUS,hold,idle,funhouse_emergencystop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_emergencystop_idle.png
+funhouse,FunHouse,emergencystop,NOT-AUS,hold,hold,funhouse_emergencystop_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_emergencystop_hold.png
+funhouse,FunHouse,onoff,EIN/AUS,press,idle,funhouse_onoff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_onoff_idle.png
+funhouse,FunHouse,onoff,EIN/AUS,press,pressed,funhouse_onoff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_onoff_pressed.png
+funhouse,FunHouse,turntable1,Drehscheibe 1.OG,press,idle,funhouse_turntable1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable1_idle.png
+funhouse,FunHouse,turntable1,Drehscheibe 1.OG,press,pressed,funhouse_turntable1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable1_pressed.png
+funhouse,FunHouse,turntable2,Drehscheibe 2.OG,press,idle,funhouse_turntable2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable2_idle.png
+funhouse,FunHouse,turntable2,Drehscheibe 2.OG,press,pressed,funhouse_turntable2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable2_pressed.png
+funhouse,FunHouse,turntable3,Drehscheibe Dach,press,idle,funhouse_turntable3_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable3_idle.png
+funhouse,FunHouse,turntable3,Drehscheibe Dach,press,pressed,funhouse_turntable3_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_turntable3_pressed.png
+funhouse,FunHouse,conveyor1,Laufband 1.OG,press,idle,funhouse_conveyor1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor1_idle.png
+funhouse,FunHouse,conveyor1,Laufband 1.OG,press,pressed,funhouse_conveyor1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor1_pressed.png
+funhouse,FunHouse,conveyor2,Laufband 2.OG,press,idle,funhouse_conveyor2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor2_idle.png
+funhouse,FunHouse,conveyor2,Laufband 2.OG,press,pressed,funhouse_conveyor2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_conveyor2_pressed.png
+funhouse,FunHouse,vibrate1,Vibrierplatte,press,idle,funhouse_vibrate1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_vibrate1_idle.png
+funhouse,FunHouse,vibrate1,Vibrierplatte,press,pressed,funhouse_vibrate1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_vibrate1_pressed.png
+funhouse,FunHouse,tunnel1,Drehtunnel,press,idle,funhouse_tunnel1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_tunnel1_idle.png
+funhouse,FunHouse,tunnel1,Drehtunnel,press,pressed,funhouse_tunnel1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/funhouse/funhouse_tunnel1_pressed.png
+rotator,Rotator,emergencystop,NOT-AUS,hold,idle,rotator_emergencystop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_emergencystop_idle.png
+rotator,Rotator,emergencystop,NOT-AUS,hold,hold,rotator_emergencystop_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_emergencystop_hold.png
+rotator,Rotator,onoff,EIN/AUS,press,idle,rotator_onoff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_onoff_idle.png
+rotator,Rotator,onoff,EIN/AUS,press,pressed,rotator_onoff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_onoff_pressed.png
+rotator,Rotator,reset,Reset,press,idle,rotator_reset_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_reset_idle.png
+rotator,Rotator,reset,Reset,press,pressed,rotator_reset_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_reset_pressed.png
+rotator,Rotator,park,Park,press,idle,rotator_park_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_park_idle.png
+rotator,Rotator,park,Park,press,pressed,rotator_park_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_park_pressed.png
+rotator,Rotator,pumpe,Pumpe,toggle,off,rotator_pumpe_off.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_pumpe_off.png
+rotator,Rotator,pumpe,Pumpe,toggle,on,rotator_pumpe_on.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_pumpe_on.png
+rotator,Rotator,kompressor,Kompressor,toggle,off,rotator_kompressor_off.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kompressor_off.png
+rotator,Rotator,kompressor,Kompressor,toggle,on,rotator_kompressor_on.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kompressor_on.png
+rotator,Rotator,plattespeeddown,Platte -,repeat,idle,rotator_plattespeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeeddown_idle.png
+rotator,Rotator,plattespeeddown,Platte -,repeat,repeat,rotator_plattespeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeeddown_repeat.png
+rotator,Rotator,plattespeedup,Platte +,repeat,idle,rotator_plattespeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeedup_idle.png
+rotator,Rotator,plattespeedup,Platte +,repeat,repeat,rotator_plattespeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_plattespeedup_repeat.png
+rotator,Rotator,platte0,Platte 0,press,idle,rotator_platte0_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte0_idle.png
+rotator,Rotator,platte0,Platte 0,press,pressed,rotator_platte0_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte0_pressed.png
+rotator,Rotator,platte,Platte,toggle,off,rotator_platte_off.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte_off.png
+rotator,Rotator,platte,Platte,toggle,on,rotator_platte_on.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_platte_on.png
+rotator,Rotator,kreuzspeeddown,Kreuz -,repeat,idle,rotator_kreuzspeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeeddown_idle.png
+rotator,Rotator,kreuzspeeddown,Kreuz -,repeat,repeat,rotator_kreuzspeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeeddown_repeat.png
+rotator,Rotator,kreuzspeedup,Kreuz +,repeat,idle,rotator_kreuzspeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeedup_idle.png
+rotator,Rotator,kreuzspeedup,Kreuz +,repeat,repeat,rotator_kreuzspeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuzspeedup_repeat.png
+rotator,Rotator,kreuz0,Kreuz 0,press,idle,rotator_kreuz0_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz0_idle.png
+rotator,Rotator,kreuz0,Kreuz 0,press,pressed,rotator_kreuz0_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz0_pressed.png
+rotator,Rotator,kreuz,Kreuz,toggle,off,rotator_kreuz_off.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz_off.png
+rotator,Rotator,kreuz,Kreuz,toggle,on,rotator_kreuz_on.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_kreuz_on.png
+rotator,Rotator,inverterspeeddown,Inverter -,repeat,idle,rotator_inverterspeeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeeddown_idle.png
+rotator,Rotator,inverterspeeddown,Inverter -,repeat,repeat,rotator_inverterspeeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeeddown_repeat.png
+rotator,Rotator,inverterspeedup,Inverter +,repeat,idle,rotator_inverterspeedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeedup_idle.png
+rotator,Rotator,inverterspeedup,Inverter +,repeat,repeat,rotator_inverterspeedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverterspeedup_repeat.png
+rotator,Rotator,inverter0,Inverter 0,press,idle,rotator_inverter0_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter0_idle.png
+rotator,Rotator,inverter0,Inverter 0,press,pressed,rotator_inverter0_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter0_pressed.png
+rotator,Rotator,inverter,Inverter,toggle,off,rotator_inverter_off.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter_off.png
+rotator,Rotator,inverter,Inverter,toggle,on,rotator_inverter_on.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_inverter_on.png
+rotator,Rotator,buegel,Buegel,toggle,off,rotator_buegel_off.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_buegel_off.png
+rotator,Rotator,buegel,Buegel,toggle,on,rotator_buegel_on.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_buegel_on.png
+rotator,Rotator,hubup,Hub Hoch,hold,idle,rotator_hubup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubup_idle.png
+rotator,Rotator,hubup,Hub Hoch,hold,hold,rotator_hubup_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubup_hold.png
+rotator,Rotator,hubstop,Hub Stop,press,idle,rotator_hubstop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubstop_idle.png
+rotator,Rotator,hubstop,Hub Stop,press,pressed,rotator_hubstop_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubstop_pressed.png
+rotator,Rotator,hubdown,Hub Runter,hold,idle,rotator_hubdown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubdown_idle.png
+rotator,Rotator,hubdown,Hub Runter,hold,hold,rotator_hubdown_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/rotator/rotator_hubdown_hold.png
+turaka,Turaka,emergencystop,NOT-AUS,hold,idle,turaka_emergencystop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_emergencystop_idle.png
+turaka,Turaka,emergencystop,NOT-AUS,hold,hold,turaka_emergencystop_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_emergencystop_hold.png
+turaka,Turaka,onoff,EIN/AUS,press,idle,turaka_onoff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_onoff_idle.png
+turaka,Turaka,onoff,EIN/AUS,press,pressed,turaka_onoff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_onoff_pressed.png
+turaka,Turaka,reset,Reset,press,idle,turaka_reset_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_reset_idle.png
+turaka,Turaka,reset,Reset,press,pressed,turaka_reset_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_reset_pressed.png
+turaka,Turaka,speeddown,Speed -,repeat,idle,turaka_speeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speeddown_idle.png
+turaka,Turaka,speeddown,Speed -,repeat,repeat,turaka_speeddown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speeddown_repeat.png
+turaka,Turaka,speedup,Speed +,repeat,idle,turaka_speedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speedup_idle.png
+turaka,Turaka,speedup,Speed +,repeat,repeat,turaka_speedup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_speedup_repeat.png
+turaka,Turaka,direction,Richtung,press,idle,turaka_direction_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_direction_idle.png
+turaka,Turaka,direction,Richtung,press,pressed,turaka_direction_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_direction_pressed.png
+turaka,Turaka,start,Start,press,idle,turaka_start_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_start_idle.png
+turaka,Turaka,start,Start,press,pressed,turaka_start_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_start_pressed.png
+turaka,Turaka,stop,Stop,press,idle,turaka_stop_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_stop_idle.png
+turaka,Turaka,stop,Stop,press,pressed,turaka_stop_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_stop_pressed.png
+turaka,Turaka,platform,Platform,press,idle,turaka_platform_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_platform_idle.png
+turaka,Turaka,platform,Platform,press,pressed,turaka_platform_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_platform_pressed.png
+turaka,Turaka,parkcar1,Park Wagen 1,press,idle,turaka_parkcar1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar1_idle.png
+turaka,Turaka,parkcar1,Park Wagen 1,press,pressed,turaka_parkcar1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar1_pressed.png
+turaka,Turaka,parkcar2,Park Wagen 2,press,idle,turaka_parkcar2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar2_idle.png
+turaka,Turaka,parkcar2,Park Wagen 2,press,pressed,turaka_parkcar2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/turaka/turaka_parkcar2_pressed.png
+standard,Standard,enterleave,Ein-/Aussteigen,press,idle,standard_enterleave_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_enterleave_idle.png
+standard,Standard,enterleave,Ein-/Aussteigen,press,pressed,standard_enterleave_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_enterleave_pressed.png
+standard,Standard,pushtotalk,Push to Talk,hold,idle,standard_pushtotalk_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_pushtotalk_idle.png
+standard,Standard,pushtotalk,Push to Talk,hold,hold,standard_pushtotalk_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_pushtotalk_hold.png
+standard,Standard,nextseat,Naechster Platz,mod,idle,standard_nextseat_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_nextseat_idle.png
+standard,Standard,nextseat,Naechster Platz,mod,pressed,standard_nextseat_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_nextseat_pressed.png
+standard,Standard,lastseat,Letzter Platz,mod,idle,standard_lastseat_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_lastseat_idle.png
+standard,Standard,lastseat,Letzter Platz,mod,pressed,standard_lastseat_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_lastseat_pressed.png
+standard,Standard,camera,Kamerawechsel,press,idle,standard_camera_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_camera_idle.png
+standard,Standard,camera,Kamerawechsel,press,pressed,standard_camera_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_camera_pressed.png
+standard,Standard,chat,Chat,press,idle,standard_chat_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_chat_idle.png
+standard,Standard,chat,Chat,press,pressed,standard_chat_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/standard/standard_chat_pressed.png
+settings,Settings,menu,Menue,press,idle,settings_menu_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_menu_idle.png
+settings,Settings,menu,Menue,press,pressed,settings_menu_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_menu_pressed.png
+settings,Settings,speedup,Speed Hoch,press,idle,settings_speedup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speedup_idle.png
+settings,Settings,speedup,Speed Hoch,press,pressed,settings_speedup_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speedup_pressed.png
+settings,Settings,speeddown,Speed Runter,press,idle,settings_speeddown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speeddown_idle.png
+settings,Settings,speeddown,Speed Runter,press,pressed,settings_speeddown_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_speeddown_pressed.png
+settings,Settings,repeatspeed,Repeat Speed,system,idle,settings_repeatspeed_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_repeatspeed_idle.png
+settings,Settings,repeatspeed,Repeat Speed,system,cycle,settings_repeatspeed_cycle.png,/mnt/data/streamdeck_kirmes_icons_v2/settings/settings_repeatspeed_cycle.png
+lighteffect,LightEffect,preset1,Preset 1,press,idle,lighteffect_preset1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset1_idle.png
+lighteffect,LightEffect,preset1,Preset 1,press,pressed,lighteffect_preset1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset1_pressed.png
+lighteffect,LightEffect,preset2,Preset 2,press,idle,lighteffect_preset2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset2_idle.png
+lighteffect,LightEffect,preset2,Preset 2,press,pressed,lighteffect_preset2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset2_pressed.png
+lighteffect,LightEffect,preset3,Preset 3,press,idle,lighteffect_preset3_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset3_idle.png
+lighteffect,LightEffect,preset3,Preset 3,press,pressed,lighteffect_preset3_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset3_pressed.png
+lighteffect,LightEffect,preset4,Preset 4,press,idle,lighteffect_preset4_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset4_idle.png
+lighteffect,LightEffect,preset4,Preset 4,press,pressed,lighteffect_preset4_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset4_pressed.png
+lighteffect,LightEffect,preset5,Preset 5,press,idle,lighteffect_preset5_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset5_idle.png
+lighteffect,LightEffect,preset5,Preset 5,press,pressed,lighteffect_preset5_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset5_pressed.png
+lighteffect,LightEffect,preset6,Preset 6,press,idle,lighteffect_preset6_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset6_idle.png
+lighteffect,LightEffect,preset6,Preset 6,press,pressed,lighteffect_preset6_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset6_pressed.png
+lighteffect,LightEffect,preset7,Preset 7,press,idle,lighteffect_preset7_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset7_idle.png
+lighteffect,LightEffect,preset7,Preset 7,press,pressed,lighteffect_preset7_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset7_pressed.png
+lighteffect,LightEffect,preset8,Preset 8,press,idle,lighteffect_preset8_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset8_idle.png
+lighteffect,LightEffect,preset8,Preset 8,press,pressed,lighteffect_preset8_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset8_pressed.png
+lighteffect,LightEffect,preset9,Preset 9,press,idle,lighteffect_preset9_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset9_idle.png
+lighteffect,LightEffect,preset9,Preset 9,press,pressed,lighteffect_preset9_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_preset9_pressed.png
+lighteffect,LightEffect,light1,Light 1,press,idle,lighteffect_light1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light1_idle.png
+lighteffect,LightEffect,light1,Light 1,press,pressed,lighteffect_light1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light1_pressed.png
+lighteffect,LightEffect,light2,Light 2,press,idle,lighteffect_light2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light2_idle.png
+lighteffect,LightEffect,light2,Light 2,press,pressed,lighteffect_light2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light2_pressed.png
+lighteffect,LightEffect,light3,Light 3,press,idle,lighteffect_light3_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light3_idle.png
+lighteffect,LightEffect,light3,Light 3,press,pressed,lighteffect_light3_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light3_pressed.png
+lighteffect,LightEffect,light4,Light 4,press,idle,lighteffect_light4_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light4_idle.png
+lighteffect,LightEffect,light4,Light 4,press,pressed,lighteffect_light4_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light4_pressed.png
+lighteffect,LightEffect,light5,Light 5,press,idle,lighteffect_light5_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light5_idle.png
+lighteffect,LightEffect,light5,Light 5,press,pressed,lighteffect_light5_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light5_pressed.png
+lighteffect,LightEffect,light6,Light 6,press,idle,lighteffect_light6_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light6_idle.png
+lighteffect,LightEffect,light6,Light 6,press,pressed,lighteffect_light6_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light6_pressed.png
+lighteffect,LightEffect,light7,Light 7,press,idle,lighteffect_light7_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light7_idle.png
+lighteffect,LightEffect,light7,Light 7,press,pressed,lighteffect_light7_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light7_pressed.png
+lighteffect,LightEffect,light8,Light 8,press,idle,lighteffect_light8_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light8_idle.png
+lighteffect,LightEffect,light8,Light 8,press,pressed,lighteffect_light8_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light8_pressed.png
+lighteffect,LightEffect,light9,Light 9,press,idle,lighteffect_light9_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light9_idle.png
+lighteffect,LightEffect,light9,Light 9,press,pressed,lighteffect_light9_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_light9_pressed.png
+lighteffect,LightEffect,alloff,Alle AUS,press,idle,lighteffect_alloff_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_alloff_idle.png
+lighteffect,LightEffect,alloff,Alle AUS,press,pressed,lighteffect_alloff_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_alloff_pressed.png
+lighteffect,LightEffect,strobo,Strobo,hold,idle,lighteffect_strobo_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_strobo_idle.png
+lighteffect,LightEffect,strobo,Strobo,hold,hold,lighteffect_strobo_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_strobo_hold.png
+lighteffect,LightEffect,ledstrobe,LED Strobe,hold,idle,lighteffect_ledstrobe_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_ledstrobe_idle.png
+lighteffect,LightEffect,ledstrobe,LED Strobe,hold,hold,lighteffect_ledstrobe_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_ledstrobe_hold.png
+lighteffect,LightEffect,colorstrobe,Farbstroboskop,mod,idle,lighteffect_colorstrobe_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_colorstrobe_idle.png
+lighteffect,LightEffect,colorstrobe,Farbstroboskop,mod,pressed,lighteffect_colorstrobe_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_colorstrobe_pressed.png
+lighteffect,LightEffect,spotonoff,Spot AN/AUS,modtoggle,off,lighteffect_spotonoff_off.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotonoff_off.png
+lighteffect,LightEffect,spotonoff,Spot AN/AUS,modtoggle,on,lighteffect_spotonoff_on.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotonoff_on.png
+lighteffect,LightEffect,spotcolorup,SpotColor +,modrepeat,idle,lighteffect_spotcolorup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolorup_idle.png
+lighteffect,LightEffect,spotcolorup,SpotColor +,modrepeat,repeat,lighteffect_spotcolorup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolorup_repeat.png
+lighteffect,LightEffect,spotcolordown,SpotColor -,modrepeat,idle,lighteffect_spotcolordown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolordown_idle.png
+lighteffect,LightEffect,spotcolordown,SpotColor -,modrepeat,repeat,lighteffect_spotcolordown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_spotcolordown_repeat.png
+lighteffect,LightEffect,fog,Nebel,hold,idle,lighteffect_fog_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_fog_idle.png
+lighteffect,LightEffect,fog,Nebel,hold,hold,lighteffect_fog_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_fog_hold.png
+lighteffect,LightEffect,flame,Flamme,hold,idle,lighteffect_flame_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_flame_idle.png
+lighteffect,LightEffect,flame,Flamme,hold,hold,lighteffect_flame_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_flame_hold.png
+lighteffect,LightEffect,bubbles,Seifenblasen,modhold,idle,lighteffect_bubbles_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_bubbles_idle.png
+lighteffect,LightEffect,bubbles,Seifenblasen,modhold,hold,lighteffect_bubbles_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_bubbles_hold.png
+lighteffect,LightEffect,horn,Hupe,hold,idle,lighteffect_horn_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_horn_idle.png
+lighteffect,LightEffect,horn,Hupe,hold,hold,lighteffect_horn_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/lighteffect/lighteffect_horn_hold.png
+movingheads,MovingHeads,onoff,Moving Head,modtoggle,off,movingheads_onoff_off.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_onoff_off.png
+movingheads,MovingHeads,onoff,Moving Head,modtoggle,on,movingheads_onoff_on.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_onoff_on.png
+movingheads,MovingHeads,light,MH Licht,mod,idle,movingheads_light_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_light_idle.png
+movingheads,MovingHeads,light,MH Licht,mod,pressed,movingheads_light_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_light_pressed.png
+movingheads,MovingHeads,lightsync,MH Light Sync,mod,idle,movingheads_lightsync_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_lightsync_idle.png
+movingheads,MovingHeads,lightsync,MH Light Sync,mod,pressed,movingheads_lightsync_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_lightsync_pressed.png
+movingheads,MovingHeads,colorstrobe,MH Color Strobe,mod,idle,movingheads_colorstrobe_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorstrobe_idle.png
+movingheads,MovingHeads,colorstrobe,MH Color Strobe,mod,pressed,movingheads_colorstrobe_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorstrobe_pressed.png
+movingheads,MovingHeads,colorup,Color +,modrepeat,idle,movingheads_colorup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorup_idle.png
+movingheads,MovingHeads,colorup,Color +,modrepeat,repeat,movingheads_colorup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colorup_repeat.png
+movingheads,MovingHeads,colordown,Color -,modrepeat,idle,movingheads_colordown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colordown_idle.png
+movingheads,MovingHeads,colordown,Color -,modrepeat,repeat,movingheads_colordown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_colordown_repeat.png
+movingheads,MovingHeads,programup,Programm +,modrepeat,idle,movingheads_programup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programup_idle.png
+movingheads,MovingHeads,programup,Programm +,modrepeat,repeat,movingheads_programup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programup_repeat.png
+movingheads,MovingHeads,programdown,Programm -,modrepeat,idle,movingheads_programdown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programdown_idle.png
+movingheads,MovingHeads,programdown,Programm -,modrepeat,repeat,movingheads_programdown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_programdown_repeat.png
+movingheads,MovingHeads,gobosup,Gobos +,modrepeat,idle,movingheads_gobosup_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosup_idle.png
+movingheads,MovingHeads,gobosup,Gobos +,modrepeat,repeat,movingheads_gobosup_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosup_repeat.png
+movingheads,MovingHeads,gobosdown,Gobos -,modrepeat,idle,movingheads_gobosdown_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosdown_idle.png
+movingheads,MovingHeads,gobosdown,Gobos -,modrepeat,repeat,movingheads_gobosdown_repeat.png,/mnt/data/streamdeck_kirmes_icons_v2/movingheads/movingheads_gobosdown_repeat.png
+sound,Sound,playpause,Play/Pause,press,idle,sound_playpause_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_playpause_idle.png
+sound,Sound,playpause,Play/Pause,press,pressed,sound_playpause_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_playpause_pressed.png
+sound,Sound,next,Naechster Track,press,idle,sound_next_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_next_idle.png
+sound,Sound,next,Naechster Track,press,pressed,sound_next_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_next_pressed.png
+sound,Sound,prev,Vorheriger Track,press,idle,sound_prev_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_prev_idle.png
+sound,Sound,prev,Vorheriger Track,press,pressed,sound_prev_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_prev_pressed.png
+sound,Sound,micro,Mikro,hold,idle,sound_micro_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_micro_idle.png
+sound,Sound,micro,Mikro,hold,hold,sound_micro_hold.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_micro_hold.png
+sound,Sound,microecho,Mikro Echo,holdtoggle,off,sound_microecho_off.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_microecho_off.png
+sound,Sound,microecho,Mikro Echo,holdtoggle,on,sound_microecho_on.png,/mnt/data/streamdeck_kirmes_icons_v2/sound/sound_microecho_on.png
+jingles,Jingles,jingle1,Jingle 1,press,idle,jingles_jingle1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle1_idle.png
+jingles,Jingles,jingle1,Jingle 1,press,pressed,jingles_jingle1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle1_pressed.png
+jingles,Jingles,jingle2,Jingle 2,press,idle,jingles_jingle2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle2_idle.png
+jingles,Jingles,jingle2,Jingle 2,press,pressed,jingles_jingle2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle2_pressed.png
+jingles,Jingles,jingle3,Jingle 3,press,idle,jingles_jingle3_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle3_idle.png
+jingles,Jingles,jingle3,Jingle 3,press,pressed,jingles_jingle3_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle3_pressed.png
+jingles,Jingles,jingle4,Jingle 4,press,idle,jingles_jingle4_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle4_idle.png
+jingles,Jingles,jingle4,Jingle 4,press,pressed,jingles_jingle4_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle4_pressed.png
+jingles,Jingles,jingle5,Jingle 5,press,idle,jingles_jingle5_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle5_idle.png
+jingles,Jingles,jingle5,Jingle 5,press,pressed,jingles_jingle5_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle5_pressed.png
+jingles,Jingles,jingle6,Jingle 6,press,idle,jingles_jingle6_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle6_idle.png
+jingles,Jingles,jingle6,Jingle 6,press,pressed,jingles_jingle6_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle6_pressed.png
+jingles,Jingles,jingle7,Jingle 7,press,idle,jingles_jingle7_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle7_idle.png
+jingles,Jingles,jingle7,Jingle 7,press,pressed,jingles_jingle7_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle7_pressed.png
+jingles,Jingles,jingle8,Jingle 8,press,idle,jingles_jingle8_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle8_idle.png
+jingles,Jingles,jingle8,Jingle 8,press,pressed,jingles_jingle8_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle8_pressed.png
+jingles,Jingles,jingle9,Jingle 9,press,idle,jingles_jingle9_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle9_idle.png
+jingles,Jingles,jingle9,Jingle 9,press,pressed,jingles_jingle9_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle9_pressed.png
+jingles,Jingles,jingle10,Jingle 10,press,idle,jingles_jingle10_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle10_idle.png
+jingles,Jingles,jingle10,Jingle 10,press,pressed,jingles_jingle10_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle10_pressed.png
+jingles,Jingles,jingle11,Jingle 11,press,idle,jingles_jingle11_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle11_idle.png
+jingles,Jingles,jingle11,Jingle 11,press,pressed,jingles_jingle11_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle11_pressed.png
+jingles,Jingles,jingle12,Jingle 12,press,idle,jingles_jingle12_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle12_idle.png
+jingles,Jingles,jingle12,Jingle 12,press,pressed,jingles_jingle12_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_jingle12_pressed.png
+jingles,Jingles,deck1,Deck 1,mod,idle,jingles_deck1_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck1_idle.png
+jingles,Jingles,deck1,Deck 1,mod,pressed,jingles_deck1_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck1_pressed.png
+jingles,Jingles,deck2,Deck 2,mod,idle,jingles_deck2_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck2_idle.png
+jingles,Jingles,deck2,Deck 2,mod,pressed,jingles_deck2_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck2_pressed.png
+jingles,Jingles,deck3,Deck 3,mod,idle,jingles_deck3_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck3_idle.png
+jingles,Jingles,deck3,Deck 3,mod,pressed,jingles_deck3_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck3_pressed.png
+jingles,Jingles,deck4,Deck 4,mod,idle,jingles_deck4_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck4_idle.png
+jingles,Jingles,deck4,Deck 4,mod,pressed,jingles_deck4_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck4_pressed.png
+jingles,Jingles,deck5,Deck 5,mod,idle,jingles_deck5_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck5_idle.png
+jingles,Jingles,deck5,Deck 5,mod,pressed,jingles_deck5_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck5_pressed.png
+jingles,Jingles,deck6,Deck 6,mod,idle,jingles_deck6_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck6_idle.png
+jingles,Jingles,deck6,Deck 6,mod,pressed,jingles_deck6_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck6_pressed.png
+jingles,Jingles,deck7,Deck 7,mod,idle,jingles_deck7_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck7_idle.png
+jingles,Jingles,deck7,Deck 7,mod,pressed,jingles_deck7_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck7_pressed.png
+jingles,Jingles,deck8,Deck 8,mod,idle,jingles_deck8_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck8_idle.png
+jingles,Jingles,deck8,Deck 8,mod,pressed,jingles_deck8_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck8_pressed.png
+jingles,Jingles,deck9,Deck 9,mod,idle,jingles_deck9_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck9_idle.png
+jingles,Jingles,deck9,Deck 9,mod,pressed,jingles_deck9_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck9_pressed.png
+jingles,Jingles,deck10,Deck 10,mod,idle,jingles_deck10_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck10_idle.png
+jingles,Jingles,deck10,Deck 10,mod,pressed,jingles_deck10_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck10_pressed.png
+jingles,Jingles,deck11,Deck 11,mod,idle,jingles_deck11_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck11_idle.png
+jingles,Jingles,deck11,Deck 11,mod,pressed,jingles_deck11_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck11_pressed.png
+jingles,Jingles,deck12,Deck 12,mod,idle,jingles_deck12_idle.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck12_idle.png
+jingles,Jingles,deck12,Deck 12,mod,pressed,jingles_deck12_pressed.png,/mnt/data/streamdeck_kirmes_icons_v2/jingles/jingles_deck12_pressed.png
